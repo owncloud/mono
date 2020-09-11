@@ -6,9 +6,9 @@ import (
 
 	"github.com/micro/cli/v2"
 	"github.com/owncloud/ocis-pkg/v2/log"
-	"github.com/owncloud/ocis-reva/pkg/config"
-	"github.com/owncloud/ocis-reva/pkg/flagset"
-	"github.com/owncloud/ocis-reva/pkg/version"
+	"github.com/owncloud/mono/reva/pkg/config"
+	"github.com/owncloud/mono/reva/pkg/flagset"
+	"github.com/owncloud/mono/reva/pkg/version"
 	"github.com/spf13/viper"
 )
 

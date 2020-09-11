@@ -2,7 +2,7 @@
 title: "Storages"
 date: 2020-04-27T18:46:00+01:00
 weight: 37
-geekdocRepo: https://github.com/owncloud/ocis-reva
+geekdocRepo: https://github.com/owncloud/mono/reva
 geekdocEditPath: edit/master/docs
 geekdocFilePath: storages.md
 ---

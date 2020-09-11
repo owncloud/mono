@@ -2,7 +2,7 @@ package flagset
 
 import (
 	"github.com/micro/cli/v2"
-	"github.com/owncloud/ocis-reva/pkg/config"
+	"github.com/owncloud/mono/reva/pkg/config"
 )
 
 // LDAPWithConfig applies LDAP cfg to the flagset

@@ -5,8 +5,8 @@ import (
 	"net/http"
 
 	"github.com/micro/cli/v2"
-	"github.com/owncloud/ocis-reva/pkg/config"
-	"github.com/owncloud/ocis-reva/pkg/flagset"
+	"github.com/owncloud/mono/reva/pkg/config"
+	"github.com/owncloud/mono/reva/pkg/flagset"
 )
 
 // Health is the entrypoint for the health command.

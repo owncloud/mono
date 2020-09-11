@@ -3,8 +3,8 @@
 [![Build Status](https://cloud.drone.io/api/badges/owncloud/ocis-reva/status.svg)](https://cloud.drone.io/owncloud/ocis-reva)
 [![Gitter chat](https://badges.gitter.im/cs3org/reva.svg)](https://gitter.im/cs3org/reva)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/6f1eaaa399294d959ef7b3b10deed41d)](https://www.codacy.com/manual/owncloud/ocis-reva?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=owncloud/ocis-reva&amp;utm_campaign=Badge_Grade)
-[![Go Doc](https://godoc.org/github.com/owncloud/ocis-reva?status.svg)](http://godoc.org/github.com/owncloud/ocis-reva)
-[![Go Report](http://goreportcard.com/badge/github.com/owncloud/ocis-reva)](http://goreportcard.com/report/github.com/owncloud/ocis-reva)
+[![Go Doc](https://godoc.org/github.com/owncloud/mono/reva?status.svg)](http://godoc.org/github.com/owncloud/mono/reva)
+[![Go Report](http://goreportcard.com/badge/github.com/owncloud/mono/reva)](http://goreportcard.com/report/github.com/owncloud/mono/reva)
 [![](https://images.microbadger.com/badges/image/owncloud/ocis-reva.svg)](http://microbadger.com/images/owncloud/ocis-reva "Get your own image badge on microbadger.com")
 
 **This project is under heavy development, it's not in a working state yet!**
@@ -18,7 +18,7 @@ You can download prebuilt binaries from the GitHub releases or from our [downloa
 Make sure you have a working Go environment, for further reference or a guide take a look at the [install instructions](http://golang.org/doc/install.html).
 
 ```console
-git clone https://github.com/owncloud/ocis-reva.git
+git clone https://github.com/owncloud/mono/reva.git
 cd ocis-reva
 
 make generate build

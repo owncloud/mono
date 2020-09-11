@@ -2,7 +2,7 @@
 title: "Getting Started"
 date: 2018-05-02T00:00:00+00:00
 weight: 15
-geekdocRepo: https://github.com/owncloud/ocis-reva
+geekdocRepo: https://github.com/owncloud/mono/reva
 geekdocEditPath: edit/master/docs
 geekdocFilePath: getting-started.md
 ---

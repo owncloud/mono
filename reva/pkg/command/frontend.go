@@ -13,9 +13,9 @@ import (
 	"github.com/gofrs/uuid"
 	"github.com/micro/cli/v2"
 	"github.com/oklog/run"
-	"github.com/owncloud/ocis-reva/pkg/config"
-	"github.com/owncloud/ocis-reva/pkg/flagset"
-	"github.com/owncloud/ocis-reva/pkg/server/debug"
+	"github.com/owncloud/mono/reva/pkg/config"
+	"github.com/owncloud/mono/reva/pkg/flagset"
+	"github.com/owncloud/mono/reva/pkg/server/debug"
 )
 
 // Frontend is the entrypoint for the frontend command.
