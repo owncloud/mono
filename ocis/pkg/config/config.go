@@ -13,7 +13,7 @@ import (
 	reva "github.com/owncloud/ocis-reva/pkg/config"
 	settings "github.com/owncloud/ocis-settings/pkg/config"
 	store "github.com/owncloud/ocis-store/pkg/config"
-	thumbnails "github.com/owncloud/ocis-thumbnails/pkg/config"
+	thumbnails "github.com/owncloud/mono/thumbnails/pkg/config"
 	webdav "github.com/owncloud/ocis-webdav/pkg/config"
 	pman "github.com/refs/pman/pkg/config"
 )

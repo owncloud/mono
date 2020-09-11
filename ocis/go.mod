@@ -1,4 +1,4 @@
-module github.com/owncloud/ocis
+module github.com/owncloud/mono/ocis
 
 go 1.13
 
@@ -11,6 +11,8 @@ require (
 	github.com/micro/micro/v2 v2.8.0
 	github.com/openzipkin/zipkin-go v0.2.2
 	github.com/owncloud/flaex v0.2.0
+	github.com/owncloud/mono/thumbnails v0.1.6
+	github.com/owncloud/ocis v1.0.0-rc1
 	github.com/owncloud/ocis-accounts v0.4.2-0.20200910185129-565d3babb2ac
 	github.com/owncloud/ocis-glauth v0.5.1-0.20200909064150-0735ec933777
 	github.com/owncloud/ocis-graph v0.0.0-20200318175820-9a5a6e029db7
@@ -25,7 +27,6 @@ require (
 	github.com/owncloud/ocis-reva v0.13.1-0.20200910085648-26465bbdcf46
 	github.com/owncloud/ocis-settings v0.3.2-0.20200903035407-ad5de8264f91
 	github.com/owncloud/ocis-store v0.1.1
-	github.com/owncloud/ocis-thumbnails v0.3.0
 	github.com/owncloud/ocis-webdav v0.1.1
 	github.com/refs/pman v0.0.0-20200701173654-f05b8833071a
 	github.com/restic/calens v0.2.0
@@ -33,7 +34,7 @@ require (
 )
 
 replace (
-	google.golang.org/grpc => google.golang.org/grpc v1.26.0
 	github.com/gomodule/redigo => github.com/gomodule/redigo v1.8.2
-	github.com/owncloud/ocis-thumbnails => ../thumbnails
+	github.com/owncloud/mono/thumbnails => ../thumbnails
+	google.golang.org/grpc => google.golang.org/grpc v1.26.0
 )

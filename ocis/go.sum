@@ -1239,6 +1239,10 @@ github.com/ovh/go-ovh v0.0.0-20181109152953-ba5adb4cf014/go.mod h1:joRatxRJaZBsY
 github.com/owncloud/flaex v0.0.0-20200411150708-dce59891a203/go.mod h1:jip86t4OVURJTf8CM/0e2qcji/Y4NG3l2lR8kex4JWw=
 github.com/owncloud/flaex v0.2.0 h1:3FLf8oyMgA6HLK7w4+VJ5N1oVA8G7MptLCVjfxxIaww=
 github.com/owncloud/flaex v0.2.0/go.mod h1:jip86t4OVURJTf8CM/0e2qcji/Y4NG3l2lR8kex4JWw=
+github.com/owncloud/mono v0.0.0-20200911094237-d04baa9572d9 h1:47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+github.com/owncloud/mono/thumbnails v0.1.6 h1:ATXycZCCBkTH/nleovb+cAfdWT1DzuAj2GtEt31v6Ko=
+github.com/owncloud/mono/thumbnails v0.1.6/go.mod h1:xZOzDz8p5+dzIc2OaOZVMTgE0yZ5iD3M0/wKHaauiC4=
+github.com/owncloud/ocis v1.0.0-rc1 h1:5pxFes3myh5cwfvyZ0l6akN9wneSc9UxB5Veg2Xr1Rc=
 github.com/owncloud/ocis v1.0.0-rc1/go.mod h1:TmghyYp0UgfxWlJobYshsOzJ3i99+OaTYxmbiHPIxDo=
 github.com/owncloud/ocis-accounts v0.1.2-0.20200618163128-aa8ae58dd95e h1:FRD1/lH/6IaaWWzBXCeM4hUAoN86zQAz68nOnvCLqsY=
 github.com/owncloud/ocis-accounts v0.1.2-0.20200618163128-aa8ae58dd95e/go.mod h1:ohb58AUSUgq+kPOFAjy1s1k5Bi33YtPg45qOOPsepeM=
