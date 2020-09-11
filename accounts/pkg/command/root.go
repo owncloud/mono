@@ -9,7 +9,7 @@ import (
 	"github.com/micro/cli/v2"
 	"github.com/owncloud/mono/accounts/pkg/config"
 	"github.com/owncloud/mono/accounts/pkg/version"
-	"github.com/owncloud/ocis-pkg/v2/log"
+	"github.com/owncloud/mono/ocis-pkg/log"
 	"github.com/spf13/viper"
 )
 

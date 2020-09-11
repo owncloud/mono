@@ -15,11 +15,11 @@ import (
 	"github.com/micro/go-micro/v2/metadata"
 	"github.com/owncloud/mono/accounts/pkg/config"
 	"github.com/owncloud/mono/accounts/pkg/proto/v0"
-	olog "github.com/owncloud/ocis-pkg/v2/log"
-	"github.com/owncloud/ocis-pkg/v2/middleware"
-	"github.com/owncloud/ocis-pkg/v2/roles"
-	settings "github.com/owncloud/ocis-settings/pkg/proto/v0"
-	ssvc "github.com/owncloud/ocis-settings/pkg/service/v0"
+	olog "github.com/owncloud/mono/ocis-pkg/log"
+	"github.com/owncloud/mono/ocis-pkg/middleware"
+	"github.com/owncloud/mono/ocis-pkg/roles"
+	settings "github.com/owncloud/mono/settings/pkg/proto/v0"
+	ssvc "github.com/owncloud/mono/settings/pkg/service/v0"
 	"github.com/stretchr/testify/assert"
 )
 

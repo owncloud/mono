@@ -2,9 +2,9 @@ package service
 
 import (
 	"github.com/owncloud/mono/accounts/pkg/config"
-	"github.com/owncloud/ocis-pkg/v2/log"
-	"github.com/owncloud/ocis-pkg/v2/roles"
-	settings "github.com/owncloud/ocis-settings/pkg/proto/v0"
+	"github.com/owncloud/mono/ocis-pkg/log"
+	"github.com/owncloud/mono/ocis-pkg/roles"
+	settings "github.com/owncloud/mono/settings/pkg/proto/v0"
 )
 
 // Option defines a single option function.

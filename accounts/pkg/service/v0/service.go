@@ -19,10 +19,10 @@ import (
 	"github.com/blevesearch/bleve/analysis/tokenizer/unicode"
 	"github.com/owncloud/mono/accounts/pkg/config"
 	"github.com/owncloud/mono/accounts/pkg/proto/v0"
-	"github.com/owncloud/ocis-pkg/v2/log"
-	"github.com/owncloud/ocis-pkg/v2/roles"
-	settings "github.com/owncloud/ocis-settings/pkg/proto/v0"
-	settings_svc "github.com/owncloud/ocis-settings/pkg/service/v0"
+	"github.com/owncloud/mono/ocis-pkg/log"
+	"github.com/owncloud/mono/ocis-pkg/roles"
+	settings "github.com/owncloud/mono/settings/pkg/proto/v0"
+	settings_svc "github.com/owncloud/mono/settings/pkg/service/v0"
 )
 
 // New returns a new instance of Service

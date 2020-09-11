@@ -6,9 +6,9 @@ import (
 	mclient "github.com/micro/go-micro/v2/client"
 	"github.com/owncloud/mono/accounts/pkg/proto/v0"
 	svc "github.com/owncloud/mono/accounts/pkg/service/v0"
-	"github.com/owncloud/ocis-pkg/v2/roles"
-	"github.com/owncloud/ocis-pkg/v2/service/grpc"
-	settings "github.com/owncloud/ocis-settings/pkg/proto/v0"
+	"github.com/owncloud/mono/ocis-pkg/roles"
+	"github.com/owncloud/mono/ocis-pkg/service/grpc"
+	settings "github.com/owncloud/mono/settings/pkg/proto/v0"
 )
 
 // Server initializes a new go-micro service ready to run
