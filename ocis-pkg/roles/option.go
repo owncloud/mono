@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"github.com/owncloud/ocis-pkg/v2/log"
-	settings "github.com/owncloud/ocis-settings/pkg/proto/v0"
+	settings "github.com/owncloud/mono/settings/pkg/proto/v0"
 )
 
 // Options are all the possible options.
