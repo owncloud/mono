@@ -2,7 +2,7 @@
 title: "Getting Started"
 date: 2018-05-02T00:00:00+00:00
 weight: 25
-geekdocRepo: https://github.com/owncloud/ocis-settings
+geekdocRepo: https://github.com/owncloud/mono/settings
 geekdocEditPath: edit/master/docs
 geekdocFilePath: getting-started.md
 ---
@@ -149,7 +149,7 @@ If you prefer to configure the service with commandline flags you can see the av
 
 ### Configuration file
 
-So far we support the file formats `JSON` and `YAML`, if you want to get a full example configuration just take a look at [our repository](https://github.com/owncloud/ocis-settings/tree/master/config), there you can always see the latest configuration format. These example configurations include all available options and the default values. The configuration file will be automatically loaded if it's placed at `/etc/ocis/settings.yml`, `${HOME}/.ocis/settings.yml` or `$(pwd)/config/settings.yml`.
+So far we support the file formats `JSON` and `YAML`, if you want to get a full example configuration just take a look at [our repository](https://github.com/owncloud/mono/settings/tree/master/config), there you can always see the latest configuration format. These example configurations include all available options and the default values. The configuration file will be automatically loaded if it's placed at `/etc/ocis/settings.yml`, `${HOME}/.ocis/settings.yml` or `$(pwd)/config/settings.yml`.
 
 ## Usage
 

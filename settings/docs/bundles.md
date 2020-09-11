@@ -2,7 +2,7 @@
 title: "Settings Bundles"
 date: 2020-05-04T00:00:00+00:00
 weight: 50
-geekdocRepo: https://github.com/owncloud/ocis-settings
+geekdocRepo: https://github.com/owncloud/mono/settings
 geekdocEditPath: edit/master/docs
 geekdocFilePath: bundles.md
 ---
