@@ -1,4 +1,4 @@
-module github.com/owncloud/ocis-accounts
+module github.com/owncloud/mono/accounts
 
 go 1.13
 

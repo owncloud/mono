@@ -4,8 +4,8 @@ import (
 	"context"
 
 	"github.com/micro/cli/v2"
-	"github.com/owncloud/ocis-accounts/pkg/config"
-	"github.com/owncloud/ocis-accounts/pkg/metrics"
+	"github.com/owncloud/mono/accounts/pkg/config"
+	"github.com/owncloud/mono/accounts/pkg/metrics"
 	"github.com/owncloud/ocis-pkg/v2/log"
 )
 

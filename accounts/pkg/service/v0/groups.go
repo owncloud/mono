@@ -13,8 +13,8 @@ import (
 	"github.com/gofrs/uuid"
 	"github.com/golang/protobuf/ptypes/empty"
 	merrors "github.com/micro/go-micro/v2/errors"
-	"github.com/owncloud/ocis-accounts/pkg/proto/v0"
-	"github.com/owncloud/ocis-accounts/pkg/provider"
+	"github.com/owncloud/mono/accounts/pkg/proto/v0"
+	"github.com/owncloud/mono/accounts/pkg/provider"
 )
 
 func (s Service) indexGroups(path string) (err error) {

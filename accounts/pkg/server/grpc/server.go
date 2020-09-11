@@ -4,8 +4,8 @@ import (
 	"time"
 
 	mclient "github.com/micro/go-micro/v2/client"
-	"github.com/owncloud/ocis-accounts/pkg/proto/v0"
-	svc "github.com/owncloud/ocis-accounts/pkg/service/v0"
+	"github.com/owncloud/mono/accounts/pkg/proto/v0"
+	svc "github.com/owncloud/mono/accounts/pkg/service/v0"
 	"github.com/owncloud/ocis-pkg/v2/roles"
 	"github.com/owncloud/ocis-pkg/v2/service/grpc"
 	settings "github.com/owncloud/ocis-settings/pkg/proto/v0"
