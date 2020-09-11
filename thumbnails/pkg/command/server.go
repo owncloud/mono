@@ -14,11 +14,11 @@ import (
 	"github.com/oklog/run"
 	openzipkin "github.com/openzipkin/zipkin-go"
 	zipkinhttp "github.com/openzipkin/zipkin-go/reporter/http"
-	"github.com/owncloud/ocis-thumbnails/pkg/config"
-	"github.com/owncloud/ocis-thumbnails/pkg/flagset"
-	"github.com/owncloud/ocis-thumbnails/pkg/metrics"
-	"github.com/owncloud/ocis-thumbnails/pkg/server/debug"
-	"github.com/owncloud/ocis-thumbnails/pkg/server/grpc"
+	"github.com/owncloud/mono/thumbnails/pkg/config"
+	"github.com/owncloud/mono/thumbnails/pkg/flagset"
+	"github.com/owncloud/mono/thumbnails/pkg/metrics"
+	"github.com/owncloud/mono/thumbnails/pkg/server/debug"
+	"github.com/owncloud/mono/thumbnails/pkg/server/grpc"
 	"go.opencensus.io/stats/view"
 	"go.opencensus.io/trace"
 )
@@ -36,7 +36,7 @@ func Server(cfg *config.Config) *cli.Command {
 		},
 		Action: func(c *cli.Context) error {
 			logger := NewLogger(cfg)
-			fmt.Print("\n\nBANG!!\n\n")
+			logger.Info().Msg("BOOTING THUMBNAILS FROM OWNCLOUD/MONO/THUMBNAILS")
 			if cfg.Tracing.Enabled {
 				switch t := cfg.Tracing.Type; t {
 				case "agent":

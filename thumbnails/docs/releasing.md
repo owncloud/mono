@@ -2,7 +2,7 @@
 title: "Releasing"
 date: 2018-05-02T00:00:00+00:00
 weight: 40
-geekdocRepo: https://github.com/owncloud/ocis-thumbnails
+geekdocRepo: https://github.com/owncloud/mono/thumbnails
 geekdocEditPath: edit/master/docs
 geekdocFilePath: releasing.md
 ---
