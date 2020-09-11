@@ -18,6 +18,7 @@ require (
 	github.com/mitchellh/gox v1.0.1
 	github.com/oklog/run v1.0.0
 	github.com/openzipkin/zipkin-go v0.2.2
+	github.com/owncloud/mono/ocis-pkg v0.0.0-20200911111357-8d02528b0f85
 	github.com/owncloud/ocis-pkg/v2 v2.4.1-0.20200902134813-1e87c6173ada
 	github.com/restic/calens v0.2.0
 	github.com/spf13/viper v1.6.3
