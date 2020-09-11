@@ -2,7 +2,7 @@
 title: "Configuration"
 date: "{{ date "2006-01-02T15:04:05-0700" now }}"
 weight: 20
-geekdocRepo: https://github.com/owncloud/ocis-konnectd
+geekdocRepo: https://github.com/owncloud/mono/konnectd
 geekdocEditPath: edit/master/docs
 geekdocFilePath: configuration.md
 ---
@@ -11,7 +11,7 @@ geekdocFilePath: configuration.md
 {{ range $opt := first . }}{{ with list $fnName $opt -}}
 {{ $o := last . -}}
 {{ if eq $o.FnName $fnName -}}
---{{ $o.Name }} | ${{ index $o.Env 0 }}  
+--{{ $o.Name }} | ${{ index $o.Env 0 }}
 : {{ $o.Usage }}. {{- if $o.Default }} Default: `{{ $o.Default }}`.{{ end }}
 
 {{ end -}}

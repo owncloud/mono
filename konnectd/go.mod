@@ -1,4 +1,4 @@
-module github.com/owncloud/ocis-konnectd
+module github.com/owncloud/mono/konnectd
 
 go 1.13
 

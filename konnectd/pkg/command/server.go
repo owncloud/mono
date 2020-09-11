@@ -14,11 +14,11 @@ import (
 	"github.com/oklog/run"
 	openzipkin "github.com/openzipkin/zipkin-go"
 	zipkinhttp "github.com/openzipkin/zipkin-go/reporter/http"
-	"github.com/owncloud/ocis-konnectd/pkg/config"
-	"github.com/owncloud/ocis-konnectd/pkg/flagset"
-	"github.com/owncloud/ocis-konnectd/pkg/metrics"
-	"github.com/owncloud/ocis-konnectd/pkg/server/debug"
-	"github.com/owncloud/ocis-konnectd/pkg/server/http"
+	"github.com/owncloud/mono/konnectd/pkg/config"
+	"github.com/owncloud/mono/konnectd/pkg/flagset"
+	"github.com/owncloud/mono/konnectd/pkg/metrics"
+	"github.com/owncloud/mono/konnectd/pkg/server/debug"
+	"github.com/owncloud/mono/konnectd/pkg/server/http"
 	"go.opencensus.io/stats/view"
 	"go.opencensus.io/trace"
 )
@@ -53,6 +53,7 @@ func Server(cfg *config.Config) *cli.Command {
 		},
 		Action: func(c *cli.Context) error {
 			logger := NewLogger(cfg)
+			logger.Info().Msg("BOOTING KONNECTD FROM OWNCLOUD/MONO/KONNECTD")
 
 			if cfg.Tracing.Enabled {
 				switch t := cfg.Tracing.Type; t {
