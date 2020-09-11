@@ -19,7 +19,6 @@ require (
 	github.com/owncloud/mono/ocis-pkg v0.0.0-20200911105136-99badfff6ad9
 	github.com/owncloud/mono/settings v0.0.0-20200911105136-99badfff6ad9
 	github.com/owncloud/mono/store v0.0.0-20200911105136-99badfff6ad9
-	github.com/owncloud/ocis-store v0.1.1
 	github.com/prometheus/client_golang v1.7.1
 	github.com/restic/calens v0.2.0
 	github.com/spf13/viper v1.7.0
