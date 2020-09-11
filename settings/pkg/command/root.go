@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	"github.com/micro/cli/v2"
-	"github.com/owncloud/ocis-pkg/v2/log"
+	"github.com/owncloud/mono/ocis-pkg/log"
 	"github.com/owncloud/mono/settings/pkg/config"
 	"github.com/owncloud/mono/settings/pkg/flagset"
 	"github.com/owncloud/mono/settings/pkg/version"

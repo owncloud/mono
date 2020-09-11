@@ -2,9 +2,9 @@ package http
 
 import (
 	"github.com/go-chi/chi"
-	"github.com/owncloud/ocis-pkg/v2/account"
-	"github.com/owncloud/ocis-pkg/v2/middleware"
-	"github.com/owncloud/ocis-pkg/v2/service/http"
+	"github.com/owncloud/mono/ocis-pkg/account"
+	"github.com/owncloud/mono/ocis-pkg/middleware"
+	"github.com/owncloud/mono/ocis-pkg/service/http"
 	"github.com/owncloud/mono/settings/pkg/assets"
 	"github.com/owncloud/mono/settings/pkg/proto/v0"
 	svc "github.com/owncloud/mono/settings/pkg/service/v0"

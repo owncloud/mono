@@ -23,4 +23,8 @@ require (
 	honnef.co/go/tools v0.0.1-2020.1.5
 )
 
-replace google.golang.org/grpc => google.golang.org/grpc v1.26.0
+replace (
+	google.golang.org/grpc => google.golang.org/grpc v1.26.0
+	github.com/owncloud/mono/settings => ../settings
+)
+

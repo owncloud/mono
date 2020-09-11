@@ -16,8 +16,8 @@ require (
 	github.com/openzipkin/zipkin-go v0.2.2
 	github.com/owncloud/flaex v0.2.0
 	github.com/owncloud/mono/accounts v0.4.2-0.20200901074457-6a27781a2741
-	github.com/owncloud/mono/ocis-pkg v0.0.0-20200911105136-99badfff6ad9
-	github.com/owncloud/mono/settings v0.0.0-20200911105136-99badfff6ad9
+	github.com/owncloud/mono/ocis-pkg v0.0.0-20200911111357-8d02528b0f85
+	github.com/owncloud/mono/settings v0.0.0-20200911111357-8d02528b0f85
 	github.com/owncloud/mono/store v0.0.0-20200911105136-99badfff6ad9
 	github.com/prometheus/client_golang v1.7.1
 	github.com/restic/calens v0.2.0
@@ -31,5 +31,7 @@ require (
 replace (
 	github.com/owncloud/mono/accounts => ../accounts
 	github.com/owncloud/mono/ocis-pkg => ../ocis-pkg
+	github.com/owncloud/mono/settings => ../settings
+	github.com/owncloud/mono/store => ../store
 	google.golang.org/grpc => google.golang.org/grpc v1.26.0
 )

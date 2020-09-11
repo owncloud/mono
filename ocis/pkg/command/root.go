@@ -4,12 +4,12 @@ import (
 	"os"
 
 	"github.com/micro/cli/v2"
-	"github.com/owncloud/ocis-pkg/v2/log"
-	"github.com/owncloud/ocis/pkg/config"
-	"github.com/owncloud/ocis/pkg/flagset"
-	"github.com/owncloud/ocis/pkg/register"
-	"github.com/owncloud/ocis/pkg/runtime"
-	"github.com/owncloud/ocis/pkg/version"
+	"github.com/owncloud/mono/ocis-pkg/log"
+	"github.com/owncloud/mono/ocis/pkg/config"
+	"github.com/owncloud/mono/ocis/pkg/flagset"
+	"github.com/owncloud/mono/ocis/pkg/register"
+	"github.com/owncloud/mono/ocis/pkg/runtime"
+	"github.com/owncloud/mono/ocis/pkg/version"
 )
 
 // Execute is the entry point for the ocis-ocis command.

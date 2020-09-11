@@ -28,7 +28,7 @@ require (
 )
 
 replace (
-	google.golang.org/grpc => google.golang.org/grpc v1.26.0
 	github.com/owncloud/mono/ocis-pkg => ../ocis-pkg
 	github.com/owncloud/mono/settings => ../settings
+	google.golang.org/grpc => google.golang.org/grpc v1.26.0
 )

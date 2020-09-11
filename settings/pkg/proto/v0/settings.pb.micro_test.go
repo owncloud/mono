@@ -11,9 +11,9 @@ import (
 
 	merrors "github.com/micro/go-micro/v2/errors"
 	"github.com/micro/go-micro/v2/metadata"
-	ocislog "github.com/owncloud/ocis-pkg/v2/log"
-	"github.com/owncloud/ocis-pkg/v2/middleware"
-	"github.com/owncloud/ocis-pkg/v2/service/grpc"
+	ocislog "github.com/owncloud/mono/ocis-pkg/log"
+	"github.com/owncloud/mono/ocis-pkg/middleware"
+	"github.com/owncloud/mono/ocis-pkg/service/grpc"
 	"github.com/owncloud/mono/settings/pkg/config"
 	"github.com/owncloud/mono/settings/pkg/proto/v0"
 	svc "github.com/owncloud/mono/settings/pkg/service/v0"

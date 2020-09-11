@@ -1207,6 +1207,8 @@ github.com/owncloud/mono/settings v0.0.0-20200522101320-46ea31026363/go.mod h1:/
 github.com/owncloud/mono/settings v0.0.0-20200629120229-69693c5f8f43/go.mod h1:AeXZVHKEU+9Xt4+/lkHE5rx+sJH2if9dIrUGLhe+JOY=
 github.com/owncloud/mono/settings v0.0.0-20200911105136-99badfff6ad9 h1:ty1/Bd2iJHMq3zRyWUn38TQ3Qj3n906xvHvXKk1L8D4=
 github.com/owncloud/mono/settings v0.0.0-20200911105136-99badfff6ad9/go.mod h1:wJKbYRV3aTO/56RPoDGrw1FN9Ns9vOEt7Qhsdn4Rs+g=
+github.com/owncloud/mono/settings v0.0.0-20200911111357-8d02528b0f85 h1:ggttLcb1Vx4SW0w4SmvH6AJyrUHxhAQyQoGVJPZGIiI=
+github.com/owncloud/mono/settings v0.0.0-20200911111357-8d02528b0f85/go.mod h1:wJKbYRV3aTO/56RPoDGrw1FN9Ns9vOEt7Qhsdn4Rs+g=
 github.com/owncloud/mono/settings v0.3.0 h1:w1wdqJiMtRNJ5B7sQemvtFQQod31G6dR468GxAV0Y2g=
 github.com/owncloud/mono/settings v0.3.0/go.mod h1:vRge9QDkOsc6j76gPBmZs1Z5uOPrV4DIkZCgZCEFwBA=
 github.com/owncloud/mono/settings v0.3.2-0.20200827134219-0f9e141699e5 h1:nkgYnHBFmh7EJn1U21K0/t3gnnDlXcPnOj6Jw8jL1gE=
