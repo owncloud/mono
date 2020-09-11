@@ -34,7 +34,7 @@ func Server(cfg *config.Config) *cli.Command {
 		},
 		Action: func(c *cli.Context) error {
 			logger := NewLogger(cfg)
-			logger.Info().Msg("BOOTING ACCOUNTS FROM OWNCLOUD/MONO/THUMBNAILS")
+			logger.Info().Msg("BOOTING ACCOUNTS FROM OWNCLOUD/MONO/ACCOUNTS")
 
 			var (
 				gr          = run.Group{}
