@@ -36,6 +36,7 @@ func Server(cfg *config.Config) *cli.Command {
 		},
 		Action: func(c *cli.Context) error {
 			logger := NewLogger(cfg)
+			fmt.Print("\n\nBANG!\n\n")
 			if cfg.Tracing.Enabled {
 				switch t := cfg.Tracing.Type; t {
 				case "agent":
