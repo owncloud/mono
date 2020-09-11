@@ -3,7 +3,7 @@ package roles
 import (
 	"context"
 
-	"github.com/owncloud/ocis-pkg/v2/log"
+	"github.com/owncloud/mono/ocis-pkg/log"
 	settings "github.com/owncloud/mono/settings/pkg/proto/v0"
 )
 
