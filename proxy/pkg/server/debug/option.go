@@ -3,8 +3,8 @@ package debug
 import (
 	"context"
 
-	"github.com/owncloud/ocis-pkg/v2/log"
-	"github.com/owncloud/ocis-proxy/pkg/config"
+	"github.com/owncloud/mono/ocis-pkg/log"
+	"github.com/owncloud/mono/proxy/pkg/config"
 )
 
 // Option defines a single option function.

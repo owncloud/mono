@@ -1,6 +1,6 @@
 ---
 title: Proxy
-geekdocRepo: https://github.com/owncloud/ocis-proxy
+geekdocRepo: https://github.com/owncloud/mono/proxy
 geekdocEditPath: edit/master/docs
 geekdocFilePath: _index.md
 ---

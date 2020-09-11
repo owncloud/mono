@@ -6,9 +6,9 @@ import (
 	"net/http"
 
 	"github.com/micro/go-micro/v2/client/grpc"
-	accounts "github.com/owncloud/ocis-accounts/pkg/proto/v0"
-	"github.com/owncloud/ocis-pkg/v2/oidc"
-	"github.com/owncloud/ocis-proxy/pkg/config"
+	accounts "github.com/owncloud/mono/accounts/pkg/proto/v0"
+	"github.com/owncloud/mono/ocis-pkg/oidc"
+	"github.com/owncloud/mono/proxy/pkg/config"
 )
 
 var (

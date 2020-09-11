@@ -2,7 +2,7 @@
 title: "Configuration"
 date: "2020-04-20T21:24:14+0200"
 weight: 20
-geekdocRepo: https://github.com/owncloud/ocis-proxy
+geekdocRepo: https://github.com/owncloud/mono/proxy
 geekdocEditPath: edit/master/docs
 geekdocFilePath: configuration.md
 ---
@@ -43,16 +43,16 @@ proxy for Reva/oCIS
 
 Usage: `ocis-proxy [global options] command [command options] [arguments...]`
 
---config-file | $PROXY_CONFIG_FILE  
+--config-file | $PROXY_CONFIG_FILE
 : Path to config file.
 
---log-level | $PROXY_LOG_LEVEL  
+--log-level | $PROXY_LOG_LEVEL
 : Set logging level. Default: `info`.
 
---log-pretty | $PROXY_LOG_PRETTY  
+--log-pretty | $PROXY_LOG_PRETTY
 : Enable pretty logging. Default: `true`.
 
---log-color | $PROXY_LOG_COLOR  
+--log-color | $PROXY_LOG_COLOR
 : Enable colored logging. Default: `true`.
 
 ## Sub Commands
@@ -63,49 +63,49 @@ Start integrated server
 
 Usage: `ocis-proxy server [command options] [arguments...]`
 
---tracing-enabled | $PROXY_TRACING_ENABLED  
+--tracing-enabled | $PROXY_TRACING_ENABLED
 : Enable sending traces.
 
---tracing-type | $PROXY_TRACING_TYPE  
+--tracing-type | $PROXY_TRACING_TYPE
 : Tracing backend type. Default: `jaeger`.
 
---tracing-endpoint | $PROXY_TRACING_ENDPOINT  
+--tracing-endpoint | $PROXY_TRACING_ENDPOINT
 : Endpoint for the agent.
 
---tracing-collector | $PROXY_TRACING_COLLECTOR  
+--tracing-collector | $PROXY_TRACING_COLLECTOR
 : Endpoint for the collector.
 
---tracing-service | $PROXY_TRACING_SERVICE  
+--tracing-service | $PROXY_TRACING_SERVICE
 : Service name for tracing. Default: `proxy`.
 
---debug-addr | $PROXY_DEBUG_ADDR  
+--debug-addr | $PROXY_DEBUG_ADDR
 : Address to bind debug server. Default: `0.0.0.0:9205`.
 
---debug-token | $PROXY_DEBUG_TOKEN  
+--debug-token | $PROXY_DEBUG_TOKEN
 : Token to grant metrics access.
 
---debug-pprof | $PROXY_DEBUG_PPROF  
+--debug-pprof | $PROXY_DEBUG_PPROF
 : Enable pprof debugging.
 
---debug-zpages | $PROXY_DEBUG_ZPAGES  
+--debug-zpages | $PROXY_DEBUG_ZPAGES
 : Enable zpages debugging.
 
---http-addr | $PROXY_HTTP_ADDR  
+--http-addr | $PROXY_HTTP_ADDR
 : Address to bind http server. Default: `0.0.0.0:9200`.
 
---http-root | $PROXY_HTTP_ROOT  
+--http-root | $PROXY_HTTP_ROOT
 : Root path of http server. Default: `/`.
 
---asset-path | $PROXY_ASSET_PATH  
+--asset-path | $PROXY_ASSET_PATH
 : Path to custom assets.
 
---http-namespace | $PROXY_HTTP_NAMESPACE  
+--http-namespace | $PROXY_HTTP_NAMESPACE
 : Set the base namespace for the http namespace. Default: `com.owncloud`.
 
---transport-tls-cert | $PROXY_TRANSPORT_TLS_CERT  
+--transport-tls-cert | $PROXY_TRANSPORT_TLS_CERT
 : Certificate file for transport encryption.
 
---transport-tls-key | $PROXY_TRANSPORT_TLS_KEY  
+--transport-tls-key | $PROXY_TRANSPORT_TLS_KEY
 : Secret file for transport encryption.
 
 ### ocis-proxy health
@@ -114,6 +114,6 @@ Check health status
 
 Usage: `ocis-proxy health [command options] [arguments...]`
 
---debug-addr | $PROXY_DEBUG_ADDR  
+--debug-addr | $PROXY_DEBUG_ADDR
 : Address to debug endpoint. Default: `0.0.0.0:9109`.
 
