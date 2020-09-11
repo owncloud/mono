@@ -32,8 +32,8 @@ require (
 	go.opencensus.io v0.22.4
 )
 
-replace google.golang.org/grpc => google.golang.org/grpc v1.26.0
-
-replace github.com/gomodule/redigo => github.com/gomodule/redigo v1.8.2
-
-replace github.com/owncloud/ocis-thumbnails => ../thumbnails
+replace (
+	google.golang.org/grpc => google.golang.org/grpc v1.26.0
+	github.com/gomodule/redigo => github.com/gomodule/redigo v1.8.2
+	github.com/owncloud/ocis-thumbnails => ../thumbnails
+)
