@@ -1,4 +1,4 @@
-module github.com/owncloud/ocis-store
+module github.com/owncloud/mono/store
 
 go 1.13
 
