@@ -34,7 +34,7 @@ func Server(cfg *config.Config) *cli.Command {
 		},
 		Action: func(c *cli.Context) error {
 			logger := NewLogger(cfg)
-			logger.Info().Msg("WUBBA LUBBA DUB DUB MOTHERFUCKER")
+			logger.Info().Msg("WUBBA LUBBA DUB DUB")
 
 			var (
 				gr          = run.Group{}
