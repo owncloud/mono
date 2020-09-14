@@ -38,6 +38,7 @@ func Server(cfg *config.Config) *cli.Command {
 				"accounts",
 				"settings",
 				"konnectd",
+				"proxy",
 			}, runtime.MicroServices...)...)
 		},
 	}
