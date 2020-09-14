@@ -1,4 +1,4 @@
-module github.com/owncloud/ocis-phoenix
+module github.com/owncloud/mono/phoenix
 
 go 1.13
 
@@ -14,14 +14,18 @@ require (
 	github.com/micro/go-micro v1.18.0 // indirect
 	github.com/oklog/run v1.0.0
 	github.com/openzipkin/zipkin-go v0.2.2
+	github.com/owncloud/mono/ocis-pkg v0.0.0-00010101000000-000000000000
+	github.com/owncloud/ocis-phoenix v0.13.0 // indirect
 	github.com/owncloud/ocis-pkg v1.3.0 // indirect
-	github.com/owncloud/ocis-pkg/v2 v2.3.0
 	github.com/restic/calens v0.2.0
-	github.com/spf13/viper v1.6.1
+	github.com/spf13/viper v1.6.3
 	go.opencensus.io v0.22.4
-	golang.org/x/net v0.0.0-20200520182314-0ba52f642ac2
+	golang.org/x/net v0.0.0-20200625001655-4c5254603344
 	google.golang.org/grpc/examples v0.0.0-20200824180931-410880dd7d91 // indirect
 	gopkg.in/go-playground/validator.v9 v9.31.0 // indirect
 )
 
-replace google.golang.org/grpc => google.golang.org/grpc v1.26.0
+replace (
+	github.com/owncloud/mono/ocis-pkg => ../ocis-pkg
+	google.golang.org/grpc => google.golang.org/grpc v1.26.0
+)

@@ -8,9 +8,9 @@ import (
 	"strings"
 
 	"github.com/go-chi/chi"
-	"github.com/owncloud/ocis-phoenix/pkg/assets"
-	"github.com/owncloud/ocis-phoenix/pkg/config"
-	"github.com/owncloud/ocis-pkg/v2/log"
+	"github.com/owncloud/mono/phoenix/pkg/assets"
+	"github.com/owncloud/mono/phoenix/pkg/config"
+	"github.com/owncloud/mono/ocis-pkg/log"
 )
 
 var (

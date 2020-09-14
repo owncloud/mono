@@ -1,11 +1,11 @@
 package http
 
 import (
-	phoenixmid "github.com/owncloud/ocis-phoenix/pkg/middleware"
-	svc "github.com/owncloud/ocis-phoenix/pkg/service/v0"
-	"github.com/owncloud/ocis-phoenix/pkg/version"
-	"github.com/owncloud/ocis-pkg/v2/middleware"
-	"github.com/owncloud/ocis-pkg/v2/service/http"
+	phoenixmid "github.com/owncloud/mono/phoenix/pkg/middleware"
+	svc "github.com/owncloud/mono/phoenix/pkg/service/v0"
+	"github.com/owncloud/mono/phoenix/pkg/version"
+	"github.com/owncloud/mono/ocis-pkg/middleware"
+	"github.com/owncloud/mono/ocis-pkg/service/http"
 )
 
 // Server initializes the http service and server.

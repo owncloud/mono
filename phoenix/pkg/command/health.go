@@ -5,8 +5,8 @@ import (
 	"net/http"
 
 	"github.com/micro/cli/v2"
-	"github.com/owncloud/ocis-phoenix/pkg/config"
-	"github.com/owncloud/ocis-phoenix/pkg/flagset"
+	"github.com/owncloud/mono/phoenix/pkg/config"
+	"github.com/owncloud/mono/phoenix/pkg/flagset"
 )
 
 // Health is the entrypoint for the health command.
