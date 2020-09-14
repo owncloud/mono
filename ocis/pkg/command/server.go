@@ -41,6 +41,7 @@ func Server(cfg *config.Config) *cli.Command {
 				"proxy",
 				"phoenix",
 				"reva-frontend",
+				"reva-gateway",
 			}, runtime.MicroServices...)...)
 		},
 	}
