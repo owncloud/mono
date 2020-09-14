@@ -33,7 +33,10 @@ func Server(cfg *config.Config) *cli.Command {
 			}
 
 			r := runtime.New()
-			return r.Start(append([]string{"accounts"}, runtime.MicroServices...)...)
+			return r.Start(append([]string{
+				"accounts",
+				"settings",
+			}, runtime.MicroServices...)...)
 		},
 	}
 }
