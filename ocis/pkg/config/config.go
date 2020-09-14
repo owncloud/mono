@@ -7,7 +7,7 @@ import (
 	graph "github.com/owncloud/ocis-graph/pkg/config"
 	hello "github.com/owncloud/ocis-hello/pkg/config"
 	konnectd "github.com/owncloud/mono/konnectd/pkg/config"
-	ocs "github.com/owncloud/ocis-ocs/pkg/config"
+	ocs "github.com/owncloud/mono/ocs/pkg/config"
 	phoenix "github.com/owncloud/mono/phoenix/pkg/config"
 	proxy "github.com/owncloud/mono/proxy/pkg/config"
 	reva "github.com/owncloud/mono/reva/pkg/config"

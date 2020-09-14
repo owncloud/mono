@@ -39,6 +39,7 @@ func Server(cfg *config.Config) *cli.Command {
 				"settings",
 				"konnectd",
 				"proxy",
+				"ocs",
 				"phoenix",
 				"glauth",
 				"thumbnails",

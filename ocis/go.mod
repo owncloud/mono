@@ -14,11 +14,12 @@ require (
 	github.com/owncloud/mono/accounts v0.4.2-0.20200901074457-6a27781a2741
 	github.com/owncloud/mono/glauth v0.0.0-00010101000000-000000000000
 	github.com/owncloud/mono/konnectd v0.0.0-00010101000000-000000000000
-	github.com/owncloud/mono/ocis-pkg v0.0.0-20200911132118-5feb827c3e6c
+	github.com/owncloud/mono/ocis-pkg v0.0.0-20200914113019-7c3cfd3f8756
+	github.com/owncloud/mono/ocs v0.0.0-00010101000000-000000000000
 	github.com/owncloud/mono/phoenix v0.0.0-00010101000000-000000000000
 	github.com/owncloud/mono/proxy v0.0.0-00010101000000-000000000000
 	github.com/owncloud/mono/reva v0.0.0-00010101000000-000000000000
-	github.com/owncloud/mono/settings v0.0.0-20200911111357-8d02528b0f85
+	github.com/owncloud/mono/settings v0.0.0-20200914113019-7c3cfd3f8756
 	github.com/owncloud/mono/thumbnails v0.1.6
 	github.com/owncloud/mono/webdav v0.0.0-00010101000000-000000000000
 	github.com/owncloud/ocis v1.0.0-rc1 // indirect
@@ -43,6 +44,7 @@ replace (
 	github.com/owncloud/mono/glauth => ../glauth
 	github.com/owncloud/mono/konnectd => ../konnectd
 	github.com/owncloud/mono/ocis-pkg => ../ocis-pkg
+	github.com/owncloud/mono/ocs => ../ocs
 	github.com/owncloud/mono/phoenix => ../phoenix
 	github.com/owncloud/mono/proxy => ../proxy
 	github.com/owncloud/mono/reva => ../reva

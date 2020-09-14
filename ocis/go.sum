@@ -1226,6 +1226,8 @@ github.com/owncloud/mono/settings v0.0.0-20200911111357-8d02528b0f85 h1:ggttLcb1
 github.com/owncloud/mono/settings v0.0.0-20200911111357-8d02528b0f85/go.mod h1:wJKbYRV3aTO/56RPoDGrw1FN9Ns9vOEt7Qhsdn4Rs+g=
 github.com/owncloud/mono/store v0.0.0-20200911105136-99badfff6ad9 h1:VkBSRms5gfCRMcIC75QQGJStnpSOihXPE4b6merM8j8=
 github.com/owncloud/mono/store v0.0.0-20200911105136-99badfff6ad9/go.mod h1:mNEFQI/sI9n36UlNKCgNmErhud/ENFv+W5VT6d4krqc=
+github.com/owncloud/mono/store v0.0.0-20200914113019-7c3cfd3f8756 h1:jcjNLAbc/Nr7vhAS8vrxcIwStsEPZQqpl/m7pCC4EXs=
+github.com/owncloud/mono/store v0.0.0-20200914113019-7c3cfd3f8756/go.mod h1:mNEFQI/sI9n36UlNKCgNmErhud/ENFv+W5VT6d4krqc=
 github.com/owncloud/ocis v1.0.0-rc1 h1:5pxFes3myh5cwfvyZ0l6akN9wneSc9UxB5Veg2Xr1Rc=
 github.com/owncloud/ocis v1.0.0-rc1/go.mod h1:TmghyYp0UgfxWlJobYshsOzJ3i99+OaTYxmbiHPIxDo=
 github.com/owncloud/ocis-accounts v0.1.2-0.20200618163128-aa8ae58dd95e/go.mod h1:ohb58AUSUgq+kPOFAjy1s1k5Bi33YtPg45qOOPsepeM=

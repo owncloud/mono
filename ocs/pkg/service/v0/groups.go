@@ -8,9 +8,9 @@ import (
 	"github.com/go-chi/render"
 	merrors "github.com/micro/go-micro/v2/errors"
 
-	accounts "github.com/owncloud/ocis-accounts/pkg/proto/v0"
-	"github.com/owncloud/ocis-ocs/pkg/service/v0/data"
-	"github.com/owncloud/ocis-ocs/pkg/service/v0/response"
+	accounts "github.com/owncloud/mono/accounts/pkg/proto/v0"
+	"github.com/owncloud/mono/ocs/pkg/service/v0/data"
+	"github.com/owncloud/mono/ocs/pkg/service/v0/response"
 )
 
 // ListUserGroups lists a users groups
