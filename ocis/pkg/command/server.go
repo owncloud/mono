@@ -40,6 +40,8 @@ func Server(cfg *config.Config) *cli.Command {
 				"konnectd",
 				"proxy",
 				"phoenix",
+				"glauth",
+				"thumbnails",
 				"reva-frontend",
 				"reva-gateway",
 				"reva-users",

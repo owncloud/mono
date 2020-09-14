@@ -9,7 +9,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/owncloud/ocis-pkg/v2/log"
+	"github.com/owncloud/mono/ocis-pkg/log"
 	"github.com/owncloud/mono/thumbnails/pkg/config"
 	"github.com/pkg/errors"
 )

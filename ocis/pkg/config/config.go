@@ -2,7 +2,7 @@ package config
 
 import (
 	accounts "github.com/owncloud/mono/accounts/pkg/config"
-	glauth "github.com/owncloud/ocis-glauth/pkg/config"
+	glauth "github.com/owncloud/mono/glauth/pkg/config"
 	graphExplorer "github.com/owncloud/ocis-graph-explorer/pkg/config"
 	graph "github.com/owncloud/ocis-graph/pkg/config"
 	hello "github.com/owncloud/ocis-hello/pkg/config"

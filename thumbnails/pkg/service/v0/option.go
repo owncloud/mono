@@ -3,7 +3,7 @@ package svc
 import (
 	"net/http"
 
-	"github.com/owncloud/ocis-pkg/v2/log"
+	"github.com/owncloud/mono/ocis-pkg/log"
 	"github.com/owncloud/mono/thumbnails/pkg/config"
 	"github.com/owncloud/mono/thumbnails/pkg/thumbnail/imgsource"
 	"github.com/owncloud/mono/thumbnails/pkg/thumbnail/storage"

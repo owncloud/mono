@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/owncloud/ocis-pkg/v2/service/grpc"
+	"github.com/owncloud/mono/ocis-pkg/service/grpc"
 	"github.com/owncloud/mono/thumbnails/pkg/config"
 	"github.com/owncloud/mono/thumbnails/pkg/proto/v0"
 	"github.com/owncloud/mono/thumbnails/pkg/thumbnail/imgsource"

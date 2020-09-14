@@ -5,7 +5,7 @@ import (
 	"image"
 
 	"github.com/nfnt/resize"
-	"github.com/owncloud/ocis-pkg/v2/log"
+	"github.com/owncloud/mono/ocis-pkg/log"
 	"github.com/owncloud/mono/thumbnails/pkg/thumbnail/resolution"
 	"github.com/owncloud/mono/thumbnails/pkg/thumbnail/storage"
 )
