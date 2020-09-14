@@ -47,6 +47,8 @@ func Server(cfg *config.Config) *cli.Command {
 				"reva-auth-bearer",
 				"reva-storage-home",
 				"reva-storage-home-data",
+				"reva-storage-eos",
+				"reva-storage-eos-data",
 			}, runtime.MicroServices...)...)
 		},
 	}
