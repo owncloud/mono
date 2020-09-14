@@ -8,7 +8,7 @@ import (
 	"github.com/owncloud/mono/konnectd/pkg/config"
 	"github.com/owncloud/mono/konnectd/pkg/flagset"
 	"github.com/owncloud/mono/konnectd/pkg/version"
-	"github.com/owncloud/ocis-pkg/v2/log"
+	"github.com/owncloud/mono/ocis-pkg/log"
 	"github.com/spf13/viper"
 )
 

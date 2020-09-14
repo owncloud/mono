@@ -6,7 +6,7 @@ import (
 	"github.com/micro/cli/v2"
 	"github.com/owncloud/mono/konnectd/pkg/config"
 	"github.com/owncloud/mono/konnectd/pkg/metrics"
-	"github.com/owncloud/ocis-pkg/v2/log"
+	"github.com/owncloud/mono/ocis-pkg/log"
 )
 
 // Option defines a single option function.

@@ -6,7 +6,7 @@ import (
 
 	"github.com/owncloud/mono/konnectd/pkg/config"
 	"github.com/owncloud/mono/konnectd/pkg/version"
-	"github.com/owncloud/ocis-pkg/v2/service/debug"
+	"github.com/owncloud/mono/ocis-pkg/service/debug"
 )
 
 // Server initializes the debug service and server.
