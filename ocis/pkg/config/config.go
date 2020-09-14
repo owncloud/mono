@@ -6,7 +6,7 @@ import (
 	graphExplorer "github.com/owncloud/ocis-graph-explorer/pkg/config"
 	graph "github.com/owncloud/ocis-graph/pkg/config"
 	hello "github.com/owncloud/ocis-hello/pkg/config"
-	konnectd "github.com/owncloud/ocis-konnectd/pkg/config"
+	konnectd "github.com/owncloud/mono/konnectd/pkg/config"
 	ocs "github.com/owncloud/ocis-ocs/pkg/config"
 	phoenix "github.com/owncloud/ocis-phoenix/pkg/config"
 	proxy "github.com/owncloud/mono/proxy/pkg/config"

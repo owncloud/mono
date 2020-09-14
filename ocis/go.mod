@@ -12,17 +12,16 @@ require (
 	github.com/openzipkin/zipkin-go v0.2.2
 	github.com/owncloud/flaex v0.2.0
 	github.com/owncloud/mono/accounts v0.4.2-0.20200901074457-6a27781a2741
+	github.com/owncloud/mono/konnectd v0.0.0-00010101000000-000000000000
 	github.com/owncloud/mono/ocis-pkg v0.0.0-20200911132118-5feb827c3e6c
 	github.com/owncloud/mono/proxy v0.0.0-00010101000000-000000000000
 	github.com/owncloud/mono/settings v0.0.0-20200911111357-8d02528b0f85
 	github.com/owncloud/mono/thumbnails v0.1.6
 	github.com/owncloud/mono/webdav v0.0.0-00010101000000-000000000000
-	github.com/owncloud/ocis v1.0.0-rc1
 	github.com/owncloud/ocis-glauth v0.5.1-0.20200909064150-0735ec933777
 	github.com/owncloud/ocis-graph v0.0.0-20200318175820-9a5a6e029db7
 	github.com/owncloud/ocis-graph-explorer v0.0.0-20200210111049-017eeb40dc0c
 	github.com/owncloud/ocis-hello v0.1.0-alpha1.0.20200828085053-37fcf3c8f853
-	github.com/owncloud/ocis-konnectd v0.3.2
 	github.com/owncloud/ocis-migration v0.2.0 // indirect
 	github.com/owncloud/ocis-ocs v0.3.1
 	github.com/owncloud/ocis-phoenix v0.13.1-0.20200910090722-8e3ed0e966a5
@@ -37,6 +36,7 @@ require (
 replace (
 	github.com/gomodule/redigo => github.com/gomodule/redigo v1.8.2
 	github.com/owncloud/mono/accounts => ../accounts
+	github.com/owncloud/mono/konnectd => ../konnectd
 	github.com/owncloud/mono/ocis-pkg => ../ocis-pkg
 	github.com/owncloud/mono/proxy => ../proxy
 	github.com/owncloud/mono/settings => ../settings

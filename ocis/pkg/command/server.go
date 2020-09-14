@@ -37,6 +37,7 @@ func Server(cfg *config.Config) *cli.Command {
 			return r.Start(append([]string{
 				"accounts",
 				"settings",
+				"konnectd",
 			}, runtime.MicroServices...)...)
 		},
 	}
