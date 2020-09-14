@@ -16,18 +16,20 @@ require (
 	github.com/owncloud/mono/ocis-pkg v0.0.0-20200911132118-5feb827c3e6c
 	github.com/owncloud/mono/phoenix v0.0.0-00010101000000-000000000000
 	github.com/owncloud/mono/proxy v0.0.0-00010101000000-000000000000
+	github.com/owncloud/mono/reva v0.0.0-00010101000000-000000000000
 	github.com/owncloud/mono/settings v0.0.0-20200911111357-8d02528b0f85
 	github.com/owncloud/mono/thumbnails v0.1.6
 	github.com/owncloud/mono/webdav v0.0.0-00010101000000-000000000000
+	github.com/owncloud/ocis v1.0.0-rc1 // indirect
 	github.com/owncloud/ocis-glauth v0.5.1-0.20200909064150-0735ec933777
 	github.com/owncloud/ocis-graph v0.0.0-20200318175820-9a5a6e029db7
 	github.com/owncloud/ocis-graph-explorer v0.0.0-20200210111049-017eeb40dc0c
 	github.com/owncloud/ocis-hello v0.1.0-alpha1.0.20200828085053-37fcf3c8f853
 	github.com/owncloud/ocis-migration v0.2.0 // indirect
 	github.com/owncloud/ocis-ocs v0.3.1
-	github.com/owncloud/ocis-phoenix v0.13.1-0.20200910090722-8e3ed0e966a5
+	github.com/owncloud/ocis-phoenix v0.13.1-0.20200910090722-8e3ed0e966a5 // indirect
 	github.com/owncloud/ocis-proxy v0.7.1-0.20200907105449-201b9a652685 // indirect
-	github.com/owncloud/ocis-reva v0.13.1-0.20200910085648-26465bbdcf46
+	github.com/owncloud/ocis-reva v0.13.1-0.20200910085648-26465bbdcf46 // indirect
 	github.com/owncloud/ocis-store v0.1.1
 	github.com/refs/pman v0.0.0-20200701173654-f05b8833071a
 	github.com/restic/calens v0.2.0
@@ -41,6 +43,7 @@ replace (
 	github.com/owncloud/mono/ocis-pkg => ../ocis-pkg
 	github.com/owncloud/mono/phoenix => ../phoenix
 	github.com/owncloud/mono/proxy => ../proxy
+	github.com/owncloud/mono/reva => ../reva
 	github.com/owncloud/mono/settings => ../settings
 	github.com/owncloud/mono/thumbnails => ../thumbnails
 	github.com/owncloud/mono/webdav => ../webdav

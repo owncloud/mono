@@ -10,7 +10,7 @@ import (
 	ocs "github.com/owncloud/ocis-ocs/pkg/config"
 	phoenix "github.com/owncloud/mono/phoenix/pkg/config"
 	proxy "github.com/owncloud/mono/proxy/pkg/config"
-	reva "github.com/owncloud/ocis-reva/pkg/config"
+	reva "github.com/owncloud/mono/reva/pkg/config"
 	settings "github.com/owncloud/mono/settings/pkg/config"
 	store "github.com/owncloud/ocis-store/pkg/config"
 	thumbnails "github.com/owncloud/mono/thumbnails/pkg/config"

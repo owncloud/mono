@@ -40,6 +40,7 @@ func Server(cfg *config.Config) *cli.Command {
 				"konnectd",
 				"proxy",
 				"phoenix",
+				"reva-frontend",
 			}, runtime.MicroServices...)...)
 		},
 	}
