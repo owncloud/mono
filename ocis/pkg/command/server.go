@@ -33,6 +33,7 @@ func Server(cfg *config.Config) *cli.Command {
 			}
 
 			r := runtime.New()
+			// TODO temporary service startup selection. Should go away and the runtime should take care of it.
 			return r.Start(append([]string{
 				"accounts",
 				"settings",
