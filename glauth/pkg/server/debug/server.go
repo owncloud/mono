@@ -4,9 +4,9 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/owncloud/ocis-glauth/pkg/config"
-	"github.com/owncloud/ocis-glauth/pkg/version"
-	"github.com/owncloud/ocis-pkg/v2/service/debug"
+	"github.com/owncloud/mono/glauth/pkg/config"
+	"github.com/owncloud/mono/glauth/pkg/version"
+	"github.com/owncloud/mono/ocis-pkg/service/debug"
 )
 
 // Server initializes the debug service and server.

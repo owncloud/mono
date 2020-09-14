@@ -12,7 +12,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/owncloud/ocis-pkg/v2/log"
+	"github.com/owncloud/mono/ocis-pkg/log"
 )
 
 func publicKey(priv interface{}) interface{} {
