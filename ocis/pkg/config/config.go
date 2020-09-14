@@ -8,7 +8,7 @@ import (
 	hello "github.com/owncloud/ocis-hello/pkg/config"
 	konnectd "github.com/owncloud/mono/konnectd/pkg/config"
 	ocs "github.com/owncloud/ocis-ocs/pkg/config"
-	phoenix "github.com/owncloud/ocis-phoenix/pkg/config"
+	phoenix "github.com/owncloud/mono/phoenix/pkg/config"
 	proxy "github.com/owncloud/mono/proxy/pkg/config"
 	reva "github.com/owncloud/ocis-reva/pkg/config"
 	settings "github.com/owncloud/mono/settings/pkg/config"
