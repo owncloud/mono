@@ -44,6 +44,7 @@ func Server(cfg *config.Config) *cli.Command {
 				"reva-gateway",
 				"reva-users",
 				"reva-auth-basic",
+				"reva-auth-bearer",
 			}, runtime.MicroServices...)...)
 		},
 	}
