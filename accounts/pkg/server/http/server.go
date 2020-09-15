@@ -2,16 +2,12 @@ package http
 
 import (
 	"github.com/go-chi/chi"
-	mclient "github.com/micro/go-micro/v2/client"
 	"github.com/owncloud/mono/accounts/pkg/assets"
 	"github.com/owncloud/mono/accounts/pkg/proto/v0"
-	svc "github.com/owncloud/mono/accounts/pkg/service/v0"
 	"github.com/owncloud/mono/accounts/pkg/version"
 	"github.com/owncloud/mono/ocis-pkg/account"
 	"github.com/owncloud/mono/ocis-pkg/middleware"
-	"github.com/owncloud/mono/ocis-pkg/roles"
 	"github.com/owncloud/mono/ocis-pkg/service/http"
-	settings "github.com/owncloud/mono/settings/pkg/proto/v0"
 )
 
 // Server initializes the http service and server.
