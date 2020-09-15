@@ -43,6 +43,7 @@ def linting(ctx, module):
       'arch': 'amd64',
     },
     'steps':
+      frontend(module) +
       generate(module) + [
       {
         'name': 'vet',
@@ -162,4 +163,20 @@ def generate(module):
         },
       ],
     }
+  ]
+
+def frontend(module):
+  return [
+    {
+      'name': 'frontend',
+      'image': 'webhippie/nodejs:latest',
+      'pull': 'always',
+      'commands': [
+        'cd %s' % (module),
+        'yarn install --frozen-lockfile',
+        'yarn lint',
+        'yarn test',
+        'yarn build',
+      ],
+    },
   ]
