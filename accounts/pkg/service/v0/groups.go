@@ -17,6 +17,9 @@ import (
 	"github.com/owncloud/mono/accounts/pkg/provider"
 )
 
+// accLock mutually exclude readers from writers on group files
+var groupLock sync.Mutex
+
 func (s Service) indexGroups(path string) (err error) {
 	var f *os.File
 	if f, err = os.Open(path); err != nil {
@@ -38,9 +41,6 @@ func (s Service) indexGroups(path string) (err error) {
 
 	return
 }
-
-// accLock mutually exclude readers from writers on group files
-var groupLock sync.Mutex
 
 func (s Service) indexGroup(id string) error {
 	g := &proto.BleveGroup{

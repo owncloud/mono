@@ -1,8 +1,6 @@
 package http
 
 import (
-	"time"
-
 	"github.com/go-chi/chi"
 	mclient "github.com/micro/go-micro/v2/client"
 	"github.com/owncloud/mono/accounts/pkg/assets"
@@ -19,6 +17,7 @@ import (
 // Server initializes the http service and server.
 func Server(opts ...Option) http.Service {
 	options := newOptions(opts...)
+	handler := options.Handler
 
 	service := http.NewService(
 		http.Logger(options.Logger),
@@ -29,25 +28,6 @@ func Server(opts ...Option) http.Service {
 		http.Context(options.Context),
 		http.Flags(options.Flags...),
 	)
-
-	// TODO this won't work with a registry other than mdns. Look into Micro's client initialization.
-	// https://github.com/owncloud/ocis-proxy/issues/38
-	rs := settings.NewRoleService("com.owncloud.api.settings", mclient.DefaultClient)
-	roleManager := roles.NewManager(
-		roles.CacheSize(1024),
-		roles.CacheTTL(time.Hour*24*7),
-		roles.Logger(options.Logger),
-		roles.RoleService(rs),
-	)
-	handler, err := svc.New(
-		svc.Logger(options.Logger),
-		svc.Config(options.Config),
-		svc.RoleManager(&roleManager),
-		svc.RoleService(rs),
-	)
-	if err != nil {
-		options.Logger.Fatal().Err(err).Msg("could not initialize service handler")
-	}
 
 	mux := chi.NewMux()
 

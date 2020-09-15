@@ -344,29 +344,16 @@ func (s Service) CreateAccount(ctx context.Context, in *proto.CreateAccountReque
 
 	// extract group id
 	// TODO groups should be ignored during create, use groups.AddMember? return error?
+
+	// write and index account - note: don't do anything else in between!
 	if err = s.writeAccount(acc); err != nil {
 		s.log.Error().Err(err).Str("id", id).Msg("could not persist new account")
 		s.debugLogAccount(acc).Msg("could not persist new account")
 		return
 	}
-
-	// TODO: assign user role to all new users for now, as create Account request does not have any role field
-	if s.RoleService == nil {
-		return merrors.InternalServerError(s.id, "could not assign role to account: roleService not configured")
-	}
-	_, err = s.RoleService.AssignRoleToUser(ctx, &settings.AssignRoleToUserRequest{
-		AccountUuid: acc.Id,
-		RoleId:      settings_svc.BundleUUIDRoleUser,
-	})
-
-	if err != nil {
-		return merrors.InternalServerError(s.id, "could not assign role to account: %v", err.Error())
-	}
-
 	if err = s.indexAccount(acc.Id); err != nil {
 		return merrors.InternalServerError(s.id, "could not index new account: %v", err.Error())
 	}
-
 	s.log.Debug().Interface("account", acc).Msg("account after indexing")
 
 	if acc.PasswordProfile != nil {
@@ -380,6 +367,17 @@ func (s Service) CreateAccount(ctx context.Context, in *proto.CreateAccountReque
 		out.AccountEnabled = acc.AccountEnabled
 		out.DisplayName = acc.DisplayName
 		out.OnPremisesSamAccountName = acc.OnPremisesSamAccountName
+	}
+
+	// TODO: assign user role to all new users for now, as create Account request does not have any role field
+	if s.RoleService == nil {
+		return merrors.InternalServerError(s.id, "could not assign role to account: roleService not configured")
+	}
+	if _, err = s.RoleService.AssignRoleToUser(ctx, &settings.AssignRoleToUserRequest{
+		AccountUuid: acc.Id,
+		RoleId:      settings_svc.BundleUUIDRoleUser,
+	}); err != nil {
+		return merrors.InternalServerError(s.id, "could not assign role to account: %v", err.Error())
 	}
 
 	return

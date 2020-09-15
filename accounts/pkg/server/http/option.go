@@ -6,6 +6,7 @@ import (
 	"github.com/micro/cli/v2"
 	"github.com/owncloud/mono/accounts/pkg/config"
 	"github.com/owncloud/mono/accounts/pkg/metrics"
+	svc "github.com/owncloud/mono/accounts/pkg/service/v0"
 	"github.com/owncloud/mono/ocis-pkg/log"
 )
 
@@ -20,6 +21,7 @@ type Options struct {
 	Config    *config.Config
 	Metrics   *metrics.Metrics
 	Flags     []cli.Flag
+	Handler	  *svc.Service
 }
 
 // newOptions initializes the available default options.
@@ -72,5 +74,12 @@ func Metrics(val *metrics.Metrics) Option {
 func Flags(val []cli.Flag) Option {
 	return func(o *Options) {
 		o.Flags = append(o.Flags, val...)
+	}
+}
+
+// Handler provides a function to set the handler option.
+func Handler(val *svc.Service) Option {
+	return func(o *Options) {
+		o.Handler = val
 	}
 }
