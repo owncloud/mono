@@ -1,19 +1,18 @@
 config = {
-  'modules': [
-    'ocis',
-    'accounts',
-    'glauth',
-    'reva',
-    'ocis-pkg',
-    'phoenix',
-    'store',
-    'ocs',
-    'webdav',
-    'thumbnails',
-    'proxy',
-    'settings',
-    'konnectd',
-  ]
+  'modules': {
+    'accounts': 'frontend',
+    'glauth':'',
+    'reva':'',
+    'ocis-pkg':'',
+    'phoenix':'',
+    'store':'',
+    'ocs':'',
+    'webdav':'',
+    'thumbnails':'',
+    'proxy':'',
+    'settings':'frontend',
+    'konnectd':'',
+  }
 }
 def main(ctx):
   before = [
@@ -34,6 +33,57 @@ def main(ctx):
   return before + stages + after
 
 def linting(ctx, module):
+  steps = generate(module) + [
+    {
+      'name': 'vet',
+      'image': 'webhippie/golang:1.13',
+      'pull': 'always',
+      'commands': [
+        'cd %s' % (module),
+        'make vet',
+      ],
+      'volumes': [
+        {
+          'name': 'gopath',
+          'path': '/srv/app',
+        },
+      ],
+    },
+    {
+      'name': 'staticcheck',
+      'image': 'webhippie/golang:1.13',
+      'pull': 'always',
+      'commands': [
+        'cd %s' % (module),
+        'make staticcheck',
+      ],
+      'volumes': [
+        {
+          'name': 'gopath',
+          'path': '/srv/app',
+        },
+      ],
+    },
+    {
+      'name': 'lint',
+      'image': 'webhippie/golang:1.13',
+      'pull': 'always',
+      'commands': [
+        'cd %s' % (module),
+        'make lint',
+      ],
+      'volumes': [
+        {
+          'name': 'gopath',
+          'path': '/srv/app',
+        },
+      ],
+    },
+  ]
+
+  if config['modules'][module] == 'frontend': 
+    steps = frontend(module) + steps
+
   return {
     'kind': 'pipeline',
     'type': 'docker',
@@ -42,55 +92,7 @@ def linting(ctx, module):
       'os': 'linux',
       'arch': 'amd64',
     },
-    'steps':
-      frontend(module) +
-      generate(module) + [
-      {
-        'name': 'vet',
-        'image': 'webhippie/golang:1.13',
-        'pull': 'always',
-        'commands': [
-          'cd %s' % (module),
-          'make vet',
-        ],
-        'volumes': [
-          {
-            'name': 'gopath',
-            'path': '/srv/app',
-          },
-        ],
-      },
-      {
-        'name': 'staticcheck',
-        'image': 'webhippie/golang:1.13',
-        'pull': 'always',
-        'commands': [
-          'cd %s' % (module),
-          'make staticcheck',
-        ],
-        'volumes': [
-          {
-            'name': 'gopath',
-            'path': '/srv/app',
-          },
-        ],
-      },
-      {
-        'name': 'lint',
-        'image': 'webhippie/golang:1.13',
-        'pull': 'always',
-        'commands': [
-          'cd %s' % (module),
-          'make lint',
-        ],
-        'volumes': [
-          {
-            'name': 'gopath',
-            'path': '/srv/app',
-          },
-        ],
-      },
-    ],
+    'steps': steps,
     'trigger': {
       'ref': [
         'refs/heads/master',
@@ -178,5 +180,5 @@ def frontend(module):
         'yarn test',
         'yarn build',
       ],
-    },
+    }
   ]
