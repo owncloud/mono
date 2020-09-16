@@ -94,11 +94,11 @@ def main(ctx):
 def testPipelines(ctx):
 
   pipelines = [
-    localApiTestsOcStorage(ctx, config['apiTests']['coreBranch'], config['apiTests']['coreCommit'])
+    localApiTests(ctx, 'owncloud', config['apiTests']['coreBranch'], config['apiTests']['coreCommit'])
   ]
 
   for runPart in range(1, config['apiTests']['numberOfParts'] + 1):
-    pipelines.append(coreApiTests(ctx, config['apiTests']['coreBranch'], config['apiTests']['coreCommit'], runPart, config['apiTests']['numberOfParts']))
+    pipelines.append(coreApiTests(ctx, 'owncloud', config['apiTests']['coreBranch'], config['apiTests']['coreCommit'], runPart, config['apiTests']['numberOfParts']))
 
   pipelines += uiTests(ctx, config['uiTests']['phoenixBranch'], config['uiTests']['phoenixCommit'])
   return pipelines
@@ -219,11 +219,11 @@ def unitTests(ctx, module):
     },
   }
 
-def localApiTestsOcStorage(ctx, coreBranch = 'master', coreCommit = ''):
+def localApiTests(ctx, storage, coreBranch = 'master', coreCommit = ''):
   return {
     'kind': 'pipeline',
     'type': 'docker',
-    'name': 'localApiTestsOcStorage',
+    'name': 'localApiTests-%s-Storage' % (storage),
     'platform': {
       'os': 'linux',
       'arch': 'amd64',
@@ -231,7 +231,7 @@ def localApiTestsOcStorage(ctx, coreBranch = 'master', coreCommit = ''):
     'steps':
       generate('ocis') +
       build() +
-      ocisServer() +
+      ocisServer(storage) +
       cloneCoreRepos(coreBranch, coreCommit) + [
       {
         'name': 'localApiTestsOcStorage',
@@ -239,7 +239,9 @@ def localApiTestsOcStorage(ctx, coreBranch = 'master', coreCommit = ''):
         'pull': 'always',
         'environment' : {
           'TEST_SERVER_URL': 'https://ocis-server:9200',
-          'OCIS_REVA_DATA_ROOT': '/srv/app/tmp/reva/',
+          'OCIS_REVA_DATA_ROOT': '%s' % ('/srv/app/tmp/reva/' if storage == 'owncloud' else ''),
+          'DELETE_USER_DATA_CMD': '%s' % ('rm -rf /srv/app/tmp/reva/data/*' if storage == 'owncloud' else 'rm -rf /srv/app/tmp/ocis/root/nodes/root/*'),
+          'TEST_EXTERNAL_USER_BACKENDS':'true',
           'SKELETON_DIR': '/srv/app/tmp/testing/data/apiSkeleton',
           'TEST_OCIS':'true',
           'BEHAT_FILTER_TAGS': '~@skipOnOcis-OC-Storage',
@@ -272,7 +274,7 @@ def localApiTestsOcStorage(ctx, coreBranch = 'master', coreCommit = ''):
     },
   }
 
-def coreApiTests(ctx, coreBranch = 'master', coreCommit = '', part_number = 1, number_of_parts = 1):
+def coreApiTests(ctx, storage, coreBranch = 'master', coreCommit = '', part_number = 1, number_of_parts = 1):
   return {
     'kind': 'pipeline',
     'type': 'docker',
@@ -284,7 +286,7 @@ def coreApiTests(ctx, coreBranch = 'master', coreCommit = '', part_number = 1, n
     'steps':
       generate('ocis') +
       build() +
-      ocisServer() +
+      ocisServer(storage) +
       cloneCoreRepos(coreBranch, coreCommit) + [
       {
         'name': 'oC10ApiTests-%s' % (part_number),
@@ -292,7 +294,8 @@ def coreApiTests(ctx, coreBranch = 'master', coreCommit = '', part_number = 1, n
         'pull': 'always',
         'environment' : {
           'TEST_SERVER_URL': 'https://ocis-server:9200',
-          'OCIS_REVA_DATA_ROOT': '/srv/app/tmp/reva/',
+          'OCIS_REVA_DATA_ROOT': '%s' % ('/srv/app/tmp/reva/' if storage == 'owncloud' else ''),
+          'DELETE_USER_DATA_CMD': '%s' % ('rm -rf /srv/app/tmp/reva/data/*' if storage == 'owncloud' else 'rm -rf /srv/app/tmp/ocis/root/nodes/root/*'),
           'SKELETON_DIR': '/srv/app/tmp/testing/data/apiSkeleton',
           'TEST_OCIS':'true',
           'BEHAT_FILTER_TAGS': '~@notToImplementOnOCIS&&~@toImplementOnOCIS&&~comments-app-required&&~@federation-app-required&&~@notifications-app-required&&~systemtags-app-required&&~@local_storage',
@@ -348,7 +351,7 @@ def uiTestPipeline(suiteName, phoenixBranch = 'master', phoenixCommit = ''):
     'steps':
       generate('ocis') +
       build() +
-      ocisServer() + [
+      ocisServer('owncloud') + [
       {
         'name': 'webUITests',
         'image': 'owncloudci/nodejs:11',
@@ -443,7 +446,7 @@ def frontend(module):
     }
   ]
 
-def ocisServer():
+def ocisServer(storage):
   return [
     {
       'name': 'ocis-server',
@@ -452,11 +455,17 @@ def ocisServer():
       'detach': True,
       'environment' : {
         'OCIS_LOG_LEVEL': 'debug',
-
         'REVA_STORAGE_HOME_DATA_TEMP_FOLDER': '/srv/app/tmp/',
+        'REVA_STORAGE_HOME_DRIVER': '%s' % (storage),
+        'REVA_STORAGE_HOME_DATA_DRIVER': '%s' % (storage),
+        'REVA_STORAGE_OC_DRIVER': '%s' % (storage),
+        'REVA_STORAGE_OC_DATA_DRIVER': '%s' % (storage),
         'REVA_STORAGE_LOCAL_ROOT': '/srv/app/tmp/reva/root',
+        'REVA_STORAGE_OCIS_ROOT': '/srv/app/tmp/ocis/root',
         'REVA_STORAGE_OWNCLOUD_DATADIR': '/srv/app/tmp/reva/data',
         'REVA_STORAGE_OC_DATA_TEMP_FOLDER': '/srv/app/tmp/',
+        'REVA_STORAGE_OC_DATA_URL': 'http://ocis-server:9164',
+        'REVA_SHARING_USER_JSON_FILE': '/srv/app/tmp/reva/shares.json',
         'REVA_STORAGE_OWNCLOUD_REDIS_ADDR': 'redis:6379',
         'REVA_LDAP_IDP': 'https://ocis-server:9200',
         'REVA_OIDC_ISSUER': 'https://ocis-server:9200',
@@ -472,6 +481,7 @@ def ocisServer():
       'commands': [
         'apk add mailcap', # install /etc/mime.types
         'mkdir -p /srv/app/tmp/reva',
+        'mkdir -p /srv/app/tmp/ocis/root/nodes',
         'ocis/bin/ocis server'
       ],
       'volumes': [
