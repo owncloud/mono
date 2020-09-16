@@ -1,19 +1,22 @@
-module github.com/owncloud/ocis-migration
+module github.com/owncloud/mono/migration
 
 go 1.13
 
 require (
 	github.com/UnnoTed/fileb0x v1.1.4
-	github.com/cs3org/go-cs3apis v0.0.0-20200408065125-6e23f3ecec0a
-	github.com/cs3org/reva v0.1.0
+	github.com/cs3org/go-cs3apis v0.0.0-20200810113633-b00aca449666
+	github.com/cs3org/reva v1.2.1-0.20200826162318-c0f54e1f37ea
 	github.com/micro/cli/v2 v2.1.2
 	github.com/micro/go-micro v1.18.0
-	github.com/micro/go-micro/v2 v2.6.0
-	github.com/micro/micro/v2 v2.0.1-0.20200210100719-f38a1d8d5348 // indirect
-	github.com/owncloud/ocis-accounts v0.1.2-0.20200618163128-aa8ae58dd95e
-	github.com/owncloud/ocis-pkg/v2 v2.2.1
+	github.com/micro/go-micro/v2 v2.9.1
+	github.com/owncloud/mono/accounts v0.0.0-00010101000000-000000000000
+	github.com/owncloud/ocis-pkg/v2 v2.4.1-0.20200902134813-1e87c6173ada
 	github.com/restic/calens v0.2.0
 	github.com/spf13/viper v1.7.0
-	google.golang.org/genproto v0.0.0-20200430143042-b979b6f78d84 // indirect
-	google.golang.org/grpc v1.28.1
+	google.golang.org/grpc v1.31.1
+)
+
+replace (
+	github.com/owncloud/mono/accounts => ../accounts
+	github.com/owncloud/mono/ocis-pkg => ../ocis-pkg
 )

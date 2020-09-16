@@ -2,7 +2,7 @@ package flagset
 
 import (
 	"github.com/micro/cli/v2"
-	"github.com/owncloud/ocis-migration/pkg/config"
+	"github.com/owncloud/mono/migration/pkg/config"
 )
 
 // RootWithConfig applies cfg to the root flagset
