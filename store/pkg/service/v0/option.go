@@ -1,7 +1,7 @@
 package service
 
 import (
-	"github.com/owncloud/ocis-pkg/v2/log"
+	"github.com/owncloud/mono/ocis-pkg/log"
 	"github.com/owncloud/mono/store/pkg/config"
 )
 

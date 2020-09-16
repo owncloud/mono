@@ -8,8 +8,6 @@ require (
 	contrib.go.opencensus.io/exporter/zipkin v0.1.1
 	github.com/UnnoTed/fileb0x v1.1.4
 	github.com/go-chi/chi v4.1.2+incompatible
-	github.com/go-playground/universal-translator v0.17.0 // indirect
-	github.com/mholt/certmagic v0.9.1 // indirect
 	github.com/micro/cli/v2 v2.1.2
 	github.com/micro/go-micro v1.18.0 // indirect
 	github.com/oklog/run v1.0.0
@@ -21,8 +19,6 @@ require (
 	github.com/spf13/viper v1.6.3
 	go.opencensus.io v0.22.4
 	golang.org/x/net v0.0.0-20200625001655-4c5254603344
-	google.golang.org/grpc/examples v0.0.0-20200824180931-410880dd7d91 // indirect
-	gopkg.in/go-playground/validator.v9 v9.31.0 // indirect
 )
 
 replace (

@@ -4,7 +4,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/owncloud/ocis-pkg/v2/service/debug"
+	"github.com/owncloud/mono/ocis-pkg/service/debug"
 	"github.com/owncloud/mono/store/pkg/config"
 	"github.com/owncloud/mono/store/pkg/version"
 )
