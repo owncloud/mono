@@ -98,6 +98,10 @@ $(BIN)/$(EXECUTABLE): $(SOURCES)
 $(BIN)/$(EXECUTABLE)-debug: $(SOURCES)
 	$(GOBUILD) -v -tags '$(TAGS)' -ldflags '$(LDFLAGS)' -gcflags '$(GCFLAGS)' -o $@ ./cmd/$(NAME)
 
+.PHONY: staticcheck
+staticcheck:
+	go run honnef.co/go/tools/cmd/staticcheck -tags '$(TAGS)' $(PACKAGES)
+
 .PHONY: release
 release: release-dirs release-linux release-windows release-darwin release-copy release-check
 

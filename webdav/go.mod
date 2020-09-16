@@ -15,10 +15,10 @@ require (
 	github.com/owncloud/mono/thumbnails v0.1.6
 	github.com/spf13/viper v1.6.3
 	go.opencensus.io v0.22.4
-	google.golang.org/grpc/examples v0.0.0-20200910201057-6591123024b3 // indirect
 )
 
 replace (
-	github.com/owncloud/mono/thumbnails => ../thumbnails
 	github.com/owncloud/mono/ocis-pkg => ../ocis-pkg
+	github.com/owncloud/mono/thumbnails => ../thumbnails
+	google.golang.org/grpc => google.golang.org/grpc v1.26.0
 )
