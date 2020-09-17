@@ -5,6 +5,7 @@
 * Bugfix - Add missing env vars to docker compose: [#392](https://github.com/owncloud/ocis/pull/392)
 * Bugfix - Don't enforce empty external apps slice: [#473](https://github.com/owncloud/ocis/pull/473)
 * Bugfix - Fix director selection in proxy: [#521](https://github.com/owncloud/ocis/pull/521)
+* Bugfix - Cleanup separated indices in memory: [#224](https://github.com/owncloud/product/issues/224)
 * Bugfix - Update ocis-glauth for fixed single user search: [#214](https://github.com/owncloud/product/issues/214)
 * Bugfix - Fix builtin config for external apps: [#218](https://github.com/owncloud/product/issues/218)
 * Bugfix - Build docker images with alpine:latest instead of alpine:edge: [#416](https://github.com/owncloud/ocis/pull/416)
@@ -27,6 +28,7 @@
 * Change - Update ocis-proxy to v0.7.0: [#476](https://github.com/owncloud/ocis/pull/476)
 * Change - Update ocis-reva to 0.13.0: [#496](https://github.com/owncloud/ocis/pull/496)
 * Change - Update proxy with disabled accounts cache: [#525](https://github.com/owncloud/ocis/pull/525)
+* Change - Update ocis-reva to v0.14.0: [#556](https://github.com/owncloud/ocis/pull/556)
 * Change - Update reva config: [#336](https://github.com/owncloud/ocis/pull/336)
 * Change - Update ocis-settings to v0.3.0: [#490](https://github.com/owncloud/ocis/pull/490)
 * Enhancement - Document how to run OCIS on top of EOS: [#172](https://github.com/owncloud/ocis/pull/172)
@@ -72,6 +74,22 @@
 
    https://github.com/owncloud/ocis/pull/521
    https://github.com/owncloud/ocis-proxy/pull/99
+
+
+* Bugfix - Cleanup separated indices in memory: [#224](https://github.com/owncloud/product/issues/224)
+
+   The accounts service was creating a bleve index instance in the service handler, thus creating
+   separate in memory indices for the http and grpc servers. We moved the service handler creation
+   out of the server creation so that the service handler, thus also the bleve index, is a shared
+   instance of the servers.
+
+   This fixes a bug that accounts created through the web ui were not able to sign in until a service
+   restart.
+
+   https://github.com/owncloud/product/issues/224
+   https://github.com/owncloud/ocis-accounts/pull/117
+   https://github.com/owncloud/ocis-accounts/pull/118
+   https://github.com/owncloud/ocis/pull/555
 
 
 * Bugfix - Update ocis-glauth for fixed single user search: [#214](https://github.com/owncloud/product/issues/214)
@@ -274,6 +292,18 @@
    https://github.com/owncloud/ocis/pull/525
    https://github.com/owncloud/ocis-proxy/pull/100
    https://github.com/owncloud/ocis-accounts/pull/114
+
+
+* Change - Update ocis-reva to v0.14.0: [#556](https://github.com/owncloud/ocis/pull/556)
+
+   - Update ocis-reva to v0.14.0 - Fix default configuration for accessing shares
+   (ocis-reva/#461) - Allow configuring arbitrary storage registry rules (ocis-reva/#461) -
+   Update reva to v1.2.1-0.20200911111727-51649e37df2d (reva/#454, reva/#466)
+
+   https://github.com/owncloud/ocis/pull/556
+   https://github.com/owncloud/ocis-reva/pull/461
+   https://github.com/owncloud/ocis-reva/pull/454
+   https://github.com/owncloud/ocis-reva/pull/466
 
 
 * Change - Update reva config: [#336](https://github.com/owncloud/ocis/pull/336)
