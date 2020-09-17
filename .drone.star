@@ -59,6 +59,12 @@ config = {
     }
   }
 }
+def getTestSuiteNames():
+  keys = config['modules'].keys()
+  names = []
+  for key in keys:
+    names.append('linting&unitTests-%s' % (key))
+  return names
 
 def getUITestSuiteNames():
   return config['uiTests']['suites'].keys()
@@ -74,14 +80,15 @@ def getCoreApiTestPipelineNames():
   return names
 
 def main(ctx):
-  before = [
-  ]
-
-  for module in config['modules']:
-    before.append(testing(ctx, module))
-  before += testPipelines(ctx)
+  before = testPipelines(ctx)
 
   stages = [
+    docker(ctx, 'amd64'),
+    #docker(ctx, 'arm64'),
+    #docker(ctx, 'arm'),
+    binary(ctx, 'linux'),
+    binary(ctx, 'darwin'),
+    binary(ctx, 'windows'),
   ]
 
   after = [
@@ -90,8 +97,12 @@ def main(ctx):
   return before + stages + after
 
 def testPipelines(ctx):
+  pipelines = []
 
-  pipelines = [
+  for module in config['modules']:
+    pipelines.append(testing(ctx, module))
+
+  pipelines += [
     localApiTests(ctx, config['apiTests']['coreBranch'], config['apiTests']['coreCommit'], 'owncloud'),
     localApiTests(ctx, config['apiTests']['coreBranch'], config['apiTests']['coreCommit'], 'ocis')
   ]
@@ -380,6 +391,238 @@ def uiTestPipeline(suiteName, phoenixBranch = 'master', phoenixCommit = '', stor
         'temp': {}
       }
     ],
+    'trigger': {
+      'ref': [
+        'refs/heads/master',
+        'refs/tags/**',
+        'refs/pull/**',
+      ],
+    },
+  }
+
+def docker(ctx, arch):
+  return {
+    'kind': 'pipeline',
+    'type': 'docker',
+    'name': 'docker-%s' % (arch),
+    'platform': {
+      'os': 'linux',
+      'arch': arch,
+    },
+    'steps':
+      generate('ocis') +
+      build() + [
+      {
+        'name': 'dryrun',
+        'image': 'plugins/docker:18.09',
+        'pull': 'always',
+        'settings': {
+          'dry_run': True,
+          'context': 'ocis',
+          'tags': 'linux-%s' % (arch),
+          'dockerfile': 'ocis/docker/Dockerfile.linux.%s' % (arch),
+          'repo': ctx.repo.slug,
+        },
+        'when': {
+          'ref': {
+            'include': [
+              'refs/pull/**',
+            ],
+          },
+        },
+      },
+      {
+        'name': 'docker',
+        'image': 'plugins/docker:18.09',
+        'pull': 'always',
+        'settings': {
+          'username': {
+            'from_secret': '*docker_username*',
+          },
+          'password': {
+            'from_secret': 'docker_password',
+          },
+          'auto_tag': True,
+          'context': 'ocis',
+          'auto_tag_suffix': 'linux-%s' % (arch),
+          'dockerfile': 'ocis/docker/Dockerfile.linux.%s' % (arch),
+          'repo': ctx.repo.slug,
+        },
+        'when': {
+          'ref': {
+            'exclude': [
+              'refs/pull/**',
+              'refs/tags/**/**',
+            ],
+          },
+        },
+      },
+    ],
+    'volumes': [
+      {
+        'name': 'gopath',
+        'temp': {},
+      },
+    ],
+    'depends_on': 
+      getTestSuiteNames() + [
+      'localApiTests-owncloud-storage',
+      'localApiTests-ocis-storage',
+    ] + getCoreApiTestPipelineNames() + getUITestSuiteNames(),
+    'trigger': {
+      'ref': [
+        'refs/heads/master',
+        'refs/tags/**',
+        'refs/pull/**',
+      ],
+    },
+  }
+
+def binary(ctx, name):
+  if ctx.build.event == "tag":
+    settings = {
+      'endpoint': {
+        'from_secret': 's3_endpoint',
+      },
+      'access_key': {
+        'from_secret': 'aws_access_key_id',
+      },
+      'secret_key': {
+        'from_secret': '*aws_secret_access_key*',
+      },
+      'bucket': {
+        'from_secret': 's3_bucket',
+      },
+      'path_style': True,
+      'strip_prefix': 'ocis/dist/release/',
+      'source': 'ocis/dist/release/*',
+      'target': '/ocis/%s/%s' % (ctx.repo.name.replace("ocis-", ""), ctx.build.ref.replace("refs/tags/v", "")),
+    }
+  else:
+    settings = {
+      'endpoint': {
+        'from_secret': 's3_endpoint',
+      },
+      'access_key': {
+        'from_secret': 'aws_access_key_id',
+      },
+      'secret_key': {
+        'from_secret': '*aws_secret_access_key*',
+      },
+      'bucket': {
+        'from_secret': 's3_bucket',
+      },
+      'path_style': True,
+      'strip_prefix': 'dist/release/',
+      'source': 'ocis/dist/release/*',
+      'target': '/ocis/%s/testing' % (ctx.repo.name.replace("ocis-", "")),
+    }
+
+  return {
+    'kind': 'pipeline',
+    'type': 'docker',
+    'name': 'binaries-%s' % (name),
+    'platform': {
+      'os': 'linux',
+      'arch': 'amd64',
+    },
+    'steps':
+      generate('ocis') + [
+      {
+        'name': 'build',
+        'image': 'webhippie/golang:1.13',
+        'pull': 'always',
+        'commands': [
+          'cd ocis',
+          'make release-%s' % (name),
+        ],
+        'volumes': [
+          {
+            'name': 'gopath',
+            'path': '/srv/app',
+          },
+        ],
+      },
+      {
+        'name': 'finish',
+        'image': 'webhippie/golang:1.13',
+        'pull': 'always',
+        'commands': [
+          'cd ocis',
+          'make release-finish',
+        ],
+        'volumes': [
+          {
+            'name': 'gopath',
+            'path': '/srv/app',
+          },
+        ],
+      },
+      {
+        'name': 'upload',
+        'image': 'plugins/s3:1',
+        'pull': 'always',
+        'settings': settings,
+        'when': {
+          'ref': {
+            'include': [
+              'refs/heads/master',
+              'refs/tags/**',
+            ],
+            'exclude': [
+              'refs/tags/**/**'
+            ]
+          }
+        },
+      },
+      {
+        'name': 'changelog',
+        'image': 'toolhippie/calens:latest',
+        'pull': 'always',
+        'commands': [
+          'cd ocis',
+          'calens --version %s -o dist/CHANGELOG.md' % ctx.build.ref.replace("refs/tags/v", "").split("-")[0],
+        ],
+        'when': {
+          'ref': [
+            'refs/tags/**',
+          ],
+        },
+      },
+      {
+        'name': 'release',
+        'image': 'plugins/github-release:1',
+        'pull': 'always',
+        'settings': {
+          'api_key': {
+            'from_secret': 'github_token',
+          },
+          'files': [
+            'ocis/dist/release/*',
+          ],
+          'title': ctx.build.ref.replace("refs/tags/v", ""),
+          'note': 'ocis/dist/CHANGELOG.md',
+          'overwrite': True,
+          'prerelease': len(ctx.build.ref.split("-")) > 1,
+        },
+        'when': {
+          'ref': [
+            'refs/tags/**',
+          ],
+        },
+      },
+    ],
+    'volumes': [
+      {
+        'name': 'gopath',
+        'temp': {},
+      },
+    ],
+    'depends_on': 
+      getTestSuiteNames() + [
+      'localApiTests-owncloud-storage',
+      'localApiTests-ocis-storage',
+    ] + getCoreApiTestPipelineNames() + getUITestSuiteNames(),
     'trigger': {
       'ref': [
         'refs/heads/master',
