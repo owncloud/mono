@@ -1,7 +1,7 @@
 package grpc
 
 import (
-	"github.com/owncloud/ocis-pkg/v2/service/grpc"
+	"github.com/owncloud/mono/ocis-pkg/service/grpc"
 	"github.com/owncloud/mono/store/pkg/proto/v0"
 	svc "github.com/owncloud/mono/store/pkg/service/v0"
 )

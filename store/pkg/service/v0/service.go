@@ -10,7 +10,7 @@ import (
 	"github.com/blevesearch/bleve"
 	"github.com/blevesearch/bleve/analysis/analyzer/keyword"
 	merrors "github.com/micro/go-micro/v2/errors"
-	"github.com/owncloud/ocis-pkg/v2/log"
+	"github.com/owncloud/mono/ocis-pkg/log"
 	"github.com/owncloud/mono/store/pkg/config"
 	"github.com/owncloud/mono/store/pkg/proto/v0"
 	"google.golang.org/protobuf/encoding/protojson"

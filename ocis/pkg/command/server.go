@@ -42,6 +42,8 @@ func Server(cfg *config.Config) *cli.Command {
 				"ocs",
 				"phoenix",
 				"glauth",
+				"webdav",
+				"store",
 				"thumbnails",
 				"reva-frontend",
 				"reva-gateway",
