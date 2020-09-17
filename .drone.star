@@ -15,8 +15,8 @@ config = {
   },
   'apiTests': {
     'coreBranch': 'master',
-    'coreCommit': '39bcf3874f2e388bbe7a7802e2f1e3c6a4b8216a',
-    'numberOfParts': 2
+    'coreCommit': 'cb90a3b8bfcddb81f8cf6d84750feaa779105b94',
+    'numberOfParts': 4
   },
   'uiTests': {
     'phoenixBranch': 'master',
@@ -69,7 +69,8 @@ def getUITestSuites():
 def getCoreApiTestPipelineNames():
   names = []
   for runPart in range(1, config['apiTests']['numberOfParts'] + 1):
-    names.append('coreApiTests-%s' % runPart)
+    names.append('Core-API-Tests-owncloud-storage-%s' % runPart)
+    names.append('Core-API-Tests-ocis-storage-%s' % runPart)
   return names
 
 def main(ctx):
@@ -94,11 +95,13 @@ def main(ctx):
 def testPipelines(ctx):
 
   pipelines = [
-    localApiTests(ctx, 'owncloud', config['apiTests']['coreBranch'], config['apiTests']['coreCommit'])
+    localApiTests(ctx, config['apiTests']['coreBranch'], config['apiTests']['coreCommit'], 'owncloud'),
+    localApiTests(ctx, config['apiTests']['coreBranch'], config['apiTests']['coreCommit'], 'ocis')
   ]
 
   for runPart in range(1, config['apiTests']['numberOfParts'] + 1):
-    pipelines.append(coreApiTests(ctx, 'owncloud', config['apiTests']['coreBranch'], config['apiTests']['coreCommit'], runPart, config['apiTests']['numberOfParts']))
+    pipelines.append(coreApiTests(ctx, config['apiTests']['coreBranch'], config['apiTests']['coreCommit'], runPart, config['apiTests']['numberOfParts'], 'owncloud'))
+    pipelines.append(coreApiTests(ctx, config['apiTests']['coreBranch'], config['apiTests']['coreCommit'], runPart, config['apiTests']['numberOfParts'], 'ocis'))
 
   pipelines += uiTests(ctx, config['uiTests']['phoenixBranch'], config['uiTests']['phoenixCommit'])
   return pipelines
@@ -219,11 +222,11 @@ def unitTests(ctx, module):
     },
   }
 
-def localApiTests(ctx, storage, coreBranch = 'master', coreCommit = ''):
+def localApiTests(ctx, coreBranch = 'master', coreCommit = '', storage = 'owncloud'):
   return {
     'kind': 'pipeline',
     'type': 'docker',
-    'name': 'localApiTests-%s-Storage' % (storage),
+    'name': 'localApiTests-%s-storage' % (storage),
     'platform': {
       'os': 'linux',
       'arch': 'amd64',
@@ -234,21 +237,19 @@ def localApiTests(ctx, storage, coreBranch = 'master', coreCommit = ''):
       ocisServer(storage) +
       cloneCoreRepos(coreBranch, coreCommit) + [
       {
-        'name': 'localApiTestsOcStorage',
+        'name': 'localApiTests-%s-storage' % (storage),
         'image': 'owncloudci/php:7.2',
         'pull': 'always',
         'environment' : {
           'TEST_SERVER_URL': 'https://ocis-server:9200',
           'OCIS_REVA_DATA_ROOT': '%s' % ('/srv/app/tmp/reva/' if storage == 'owncloud' else ''),
           'DELETE_USER_DATA_CMD': '%s' % ('rm -rf /srv/app/tmp/reva/data/*' if storage == 'owncloud' else 'rm -rf /srv/app/tmp/ocis/root/nodes/root/*'),
-          'TEST_EXTERNAL_USER_BACKENDS':'true',
           'SKELETON_DIR': '/srv/app/tmp/testing/data/apiSkeleton',
           'TEST_OCIS':'true',
-          'BEHAT_FILTER_TAGS': '~@skipOnOcis-OC-Storage',
+          'BEHAT_FILTER_TAGS': '~@skipOnOcis-%s-Storage' % ('OC' if storage == 'owncloud' else 'OCIS'),
           'PATH_TO_CORE': '/srv/app/testrunner'
         },
         'commands': [
-          'cd ocis',
           'make test-acceptance-api',
         ],
         'volumes': [{
@@ -274,11 +275,11 @@ def localApiTests(ctx, storage, coreBranch = 'master', coreCommit = ''):
     },
   }
 
-def coreApiTests(ctx, storage, coreBranch = 'master', coreCommit = '', part_number = 1, number_of_parts = 1):
+def coreApiTests(ctx, coreBranch = 'master', coreCommit = '', part_number = 1, number_of_parts = 1, storage = 'owncloud'):
   return {
     'kind': 'pipeline',
     'type': 'docker',
-    'name': 'coreApiTests-%s' % (part_number),
+    'name': 'Core-API-Tests-%s-storage-%s' % (storage, part_number),
     'platform': {
       'os': 'linux',
       'arch': 'amd64',
@@ -289,7 +290,7 @@ def coreApiTests(ctx, storage, coreBranch = 'master', coreCommit = '', part_numb
       ocisServer(storage) +
       cloneCoreRepos(coreBranch, coreCommit) + [
       {
-        'name': 'oC10ApiTests-%s' % (part_number),
+        'name': 'oC10ApiTests-%s-storage-%s' % (storage, part_number),
         'image': 'owncloudci/php:7.2',
         'pull': 'always',
         'environment' : {
@@ -301,7 +302,7 @@ def coreApiTests(ctx, storage, coreBranch = 'master', coreCommit = '', part_numb
           'BEHAT_FILTER_TAGS': '~@notToImplementOnOCIS&&~@toImplementOnOCIS&&~comments-app-required&&~@federation-app-required&&~@notifications-app-required&&~systemtags-app-required&&~@local_storage',
           'DIVIDE_INTO_NUM_PARTS': number_of_parts,
           'RUN_PART': part_number,
-          'EXPECTED_FAILURES_FILE': '/drone/src/ocis/tests/acceptance/expected-failures-on-OC-storage.txt'
+          'EXPECTED_FAILURES_FILE': '/drone/src/tests/acceptance/expected-failures-on-%s-storage.txt' % (storage.upper())
         },
         'commands': [
           'cd /srv/app/testrunner',
@@ -334,7 +335,7 @@ def uiTests(ctx, phoenixBranch, phoenixCommit):
   suiteNames = getUITestSuiteNames()
   return [uiTestPipeline(suiteName, phoenixBranch, phoenixCommit) for suiteName in suiteNames]
 
-def uiTestPipeline(suiteName, phoenixBranch = 'master', phoenixCommit = ''):
+def uiTestPipeline(suiteName, phoenixBranch = 'master', phoenixCommit = '', storage = 'owncloud'):
   suites = getUITestSuites()
   paths = ""
   for path in suites[suiteName]:
@@ -351,7 +352,7 @@ def uiTestPipeline(suiteName, phoenixBranch = 'master', phoenixCommit = ''):
     'steps':
       generate('ocis') +
       build() +
-      ocisServer('owncloud') + [
+      ocisServer(storage) + [
       {
         'name': 'webUITests',
         'image': 'owncloudci/nodejs:11',
@@ -362,7 +363,7 @@ def uiTestPipeline(suiteName, phoenixBranch = 'master', phoenixCommit = ''):
           'RUN_ON_OCIS': 'true',
           'OCIS_REVA_DATA_ROOT': '/srv/app/tmp/reva',
           'OCIS_SKELETON_DIR': '/srv/app/testing/data/webUISkeleton',
-          'PHOENIX_CONFIG': '/drone/src/ocis/tests/config/drone/ocis-config.json',
+          'PHOENIX_CONFIG': '/drone/src/tests/config/drone/ocis-config.json',
           'TEST_TAGS': 'not @skipOnOCIS and not @skip',
           'LOCAL_UPLOAD_DIR': '/uploads',
           'NODE_TLS_REJECT_UNAUTHORIZED': 0,
@@ -455,17 +456,15 @@ def ocisServer(storage):
       'detach': True,
       'environment' : {
         'OCIS_LOG_LEVEL': 'debug',
-        'REVA_STORAGE_HOME_DATA_TEMP_FOLDER': '/srv/app/tmp/',
         'REVA_STORAGE_HOME_DRIVER': '%s' % (storage),
         'REVA_STORAGE_HOME_DATA_DRIVER': '%s' % (storage),
         'REVA_STORAGE_OC_DRIVER': '%s' % (storage),
         'REVA_STORAGE_OC_DATA_DRIVER': '%s' % (storage),
-        'REVA_STORAGE_LOCAL_ROOT': '/srv/app/tmp/reva/root',
+        'REVA_STORAGE_HOME_DATA_TEMP_FOLDER': '/srv/app/tmp/',
         'REVA_STORAGE_OCIS_ROOT': '/srv/app/tmp/ocis/root',
+        'REVA_STORAGE_LOCAL_ROOT': '/srv/app/tmp/reva/root',
         'REVA_STORAGE_OWNCLOUD_DATADIR': '/srv/app/tmp/reva/data',
         'REVA_STORAGE_OC_DATA_TEMP_FOLDER': '/srv/app/tmp/',
-        'REVA_STORAGE_OC_DATA_URL': 'http://ocis-server:9164',
-        'REVA_SHARING_USER_JSON_FILE': '/srv/app/tmp/reva/shares.json',
         'REVA_STORAGE_OWNCLOUD_REDIS_ADDR': 'redis:6379',
         'REVA_LDAP_IDP': 'https://ocis-server:9200',
         'REVA_OIDC_ISSUER': 'https://ocis-server:9200',
@@ -513,25 +512,6 @@ def cloneCoreRepos(coreBranch, coreCommit):
     }
   ]
 
-def build():
-  return [
-    {
-      'name': 'build',
-      'image': 'webhippie/golang:1.13',
-      'pull': 'always',
-      'commands': [
-        'cd ocis',
-        'make build',
-      ],
-      'volumes': [
-        {
-          'name': 'gopath',
-          'path': '/srv/app',
-        },
-      ],
-    },
-  ]
-
 def redis():
   return [
     {
@@ -555,4 +535,23 @@ def selenium():
           'path': '/uploads'
       }],
     }
+  ]
+
+def build():
+  return [
+    {
+      'name': 'build',
+      'image': 'webhippie/golang:1.13',
+      'pull': 'always',
+      'commands': [
+        'cd ocis',
+        'make build',
+      ],
+      'volumes': [
+        {
+          'name': 'gopath',
+          'path': '/srv/app',
+        },
+      ],
+    },
   ]
