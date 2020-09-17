@@ -78,14 +78,11 @@ def main(ctx):
   ]
 
   for module in config['modules']:
-    before.append(linting(ctx, module))
+    before.append(testing(ctx, module))
   before += testPipelines(ctx)
   
   stages = [
   ]
-
-  for module in config['modules']:
-   stages.append(unitTests(ctx, module))
 
   after = [
   ]
@@ -106,7 +103,7 @@ def testPipelines(ctx):
   pipelines += uiTests(ctx, config['uiTests']['phoenixBranch'], config['uiTests']['phoenixCommit'])
   return pipelines
 
-def linting(ctx, module):
+def testing(ctx, module):
   steps = generate(module) + [
     {
       'name': 'vet',
@@ -153,41 +150,7 @@ def linting(ctx, module):
         },
       ],
     },
-  ]
-
-  if config['modules'][module] == 'frontend': 
-    steps = frontend(module) + steps
-
-  return {
-    'kind': 'pipeline',
-    'type': 'docker',
-    'name': 'linting-%s' % (module),
-    'platform': {
-      'os': 'linux',
-      'arch': 'amd64',
-    },
-    'steps': steps,
-    'trigger': {
-      'ref': [
-        'refs/heads/master',
-        'refs/tags/**',
-        'refs/pull/**',
-      ],
-    },
-  }
-
-def unitTests(ctx, module):
-  return {
-    'kind': 'pipeline',
-    'type': 'docker',
-    'name': 'unitTests-%s' % (module),
-    'platform': {
-      'os': 'linux',
-      'arch': 'amd64',
-    },
-    'steps':
-    [
-      {
+    {
         'name': 'test',
         'image': 'webhippie/golang:1.13',
         'pull': 'always',
@@ -212,7 +175,20 @@ def unitTests(ctx, module):
           },
         },
       },
-    ],
+  ]
+
+  if config['modules'][module] == 'frontend': 
+    steps = frontend(module) + steps
+  
+  return {
+    'kind': 'pipeline',
+    'type': 'docker',
+    'name': 'linting&unitTests-%s' % (module),
+    'platform': {
+      'os': 'linux',
+      'arch': 'amd64',
+    },
+    'steps': steps,
     'trigger': {
       'ref': [
         'refs/heads/master',
