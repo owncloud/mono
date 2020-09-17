@@ -14,12 +14,13 @@ require (
 	github.com/owncloud/mono/accounts v0.4.2-0.20200901074457-6a27781a2741
 	github.com/owncloud/mono/glauth v0.0.0-00010101000000-000000000000
 	github.com/owncloud/mono/konnectd v0.0.0-00010101000000-000000000000
-	github.com/owncloud/mono/ocis-pkg v0.0.0-20200914113019-7c3cfd3f8756
+	github.com/owncloud/mono/ocis-pkg v0.1.0
 	github.com/owncloud/mono/ocs v0.0.0-00010101000000-000000000000
 	github.com/owncloud/mono/phoenix v0.0.0-00010101000000-000000000000
 	github.com/owncloud/mono/proxy v0.0.0-00010101000000-000000000000
 	github.com/owncloud/mono/reva v0.0.0-00010101000000-000000000000
 	github.com/owncloud/mono/settings v0.0.0-20200914113019-7c3cfd3f8756
+	github.com/owncloud/mono/store v0.0.0-20200914113019-7c3cfd3f8756
 	github.com/owncloud/mono/thumbnails v0.1.6
 	github.com/owncloud/mono/webdav v0.0.0-00010101000000-000000000000
 	github.com/owncloud/ocis v1.0.0-rc1 // indirect
@@ -31,7 +32,6 @@ require (
 	github.com/owncloud/ocis-phoenix v0.13.1-0.20200910090722-8e3ed0e966a5 // indirect
 	github.com/owncloud/ocis-proxy v0.7.1-0.20200907105449-201b9a652685 // indirect
 	github.com/owncloud/ocis-reva v0.13.1-0.20200910085648-26465bbdcf46 // indirect
-	github.com/owncloud/ocis-store v0.1.1
 	github.com/refs/pman v0.0.0-20200701173654-f05b8833071a
 	github.com/restic/calens v0.2.0
 	go.opencensus.io v0.22.4
@@ -48,6 +48,7 @@ replace (
 	github.com/owncloud/mono/proxy => ../proxy
 	github.com/owncloud/mono/reva => ../reva
 	github.com/owncloud/mono/settings => ../settings
+	github.com/owncloud/mono/store => ../store
 	github.com/owncloud/mono/thumbnails => ../thumbnails
 	github.com/owncloud/mono/webdav => ../webdav
 	google.golang.org/grpc => google.golang.org/grpc v1.26.0

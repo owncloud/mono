@@ -12,7 +12,7 @@ import (
 	proxy "github.com/owncloud/mono/proxy/pkg/config"
 	reva "github.com/owncloud/mono/reva/pkg/config"
 	settings "github.com/owncloud/mono/settings/pkg/config"
-	store "github.com/owncloud/ocis-store/pkg/config"
+	store "github.com/owncloud/mono/store/pkg/config"
 	thumbnails "github.com/owncloud/mono/thumbnails/pkg/config"
 	webdav "github.com/owncloud/mono/webdav/pkg/config"
 	pman "github.com/refs/pman/pkg/config"
