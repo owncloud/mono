@@ -41,6 +41,7 @@ func Server(cfg *config.Config) *cli.Command {
 				"proxy",
 				"ocs",
 				"phoenix",
+				"reva-sharing",
 				"glauth",
 				"thumbnails",
 				"reva-frontend",
