@@ -1,8 +1,8 @@
 package assets
 
 import (
-	"github.com/owncloud/mono/ocis-pkg/log"
-	"github.com/owncloud/mono/settings/pkg/config"
+	"github.com/owncloud/ocis/ocis-pkg/log"
+	"github.com/owncloud/ocis/settings/pkg/config"
 )
 
 // Option defines a single option function.

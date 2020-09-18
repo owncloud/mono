@@ -6,9 +6,9 @@ import (
 
 	"github.com/go-chi/chi"
 	"github.com/micro/go-micro/v2/client"
-	thumbnails "github.com/owncloud/mono/thumbnails/pkg/proto/v0"
-	"github.com/owncloud/mono/webdav/pkg/config"
-	thumbnail "github.com/owncloud/mono/webdav/pkg/dav/thumbnails"
+	thumbnails "github.com/owncloud/ocis/thumbnails/pkg/proto/v0"
+	"github.com/owncloud/ocis/webdav/pkg/config"
+	thumbnail "github.com/owncloud/ocis/webdav/pkg/dav/thumbnails"
 )
 
 // Service defines the extension handlers.

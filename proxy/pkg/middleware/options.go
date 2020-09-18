@@ -1,14 +1,14 @@
 package middleware
 
 import (
-	settings "github.com/owncloud/mono/settings/pkg/proto/v0"
+	settings "github.com/owncloud/ocis/settings/pkg/proto/v0"
 	"net/http"
 
 	gateway "github.com/cs3org/go-cs3apis/cs3/gateway/v1beta1"
-	acc "github.com/owncloud/mono/accounts/pkg/proto/v0"
-	"github.com/owncloud/mono/ocis-pkg/log"
-	"github.com/owncloud/mono/proxy/pkg/config"
-	storepb "github.com/owncloud/mono/store/pkg/proto/v0"
+	acc "github.com/owncloud/ocis/accounts/pkg/proto/v0"
+	"github.com/owncloud/ocis/ocis-pkg/log"
+	"github.com/owncloud/ocis/proxy/pkg/config"
+	storepb "github.com/owncloud/ocis/store/pkg/proto/v0"
 )
 
 // Option defines a single option function.

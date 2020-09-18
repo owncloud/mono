@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/owncloud/mono/ocis-pkg/log"
-	v0proto "github.com/owncloud/mono/thumbnails/pkg/proto/v0"
+	"github.com/owncloud/ocis/ocis-pkg/log"
+	v0proto "github.com/owncloud/ocis/thumbnails/pkg/proto/v0"
 )
 
 // NewLogging returns a service that logs messages.

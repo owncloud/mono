@@ -2,7 +2,7 @@
 title: "Settings Values"
 date: 2020-05-04T00:00:00+00:00
 weight: 51
-geekdocRepo: https://github.com/owncloud/mono/settings
+geekdocRepo: https://github.com/owncloud/ocis/settings
 geekdocEditPath: edit/master/docs
 geekdocFilePath: values.md
 ---

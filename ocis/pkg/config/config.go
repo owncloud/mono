@@ -1,20 +1,20 @@
 package config
 
 import (
-	accounts "github.com/owncloud/mono/accounts/pkg/config"
-	glauth "github.com/owncloud/mono/glauth/pkg/config"
+	accounts "github.com/owncloud/ocis/accounts/pkg/config"
+	glauth "github.com/owncloud/ocis/glauth/pkg/config"
 	graphExplorer "github.com/owncloud/ocis-graph-explorer/pkg/config"
 	graph "github.com/owncloud/ocis-graph/pkg/config"
 	hello "github.com/owncloud/ocis-hello/pkg/config"
-	konnectd "github.com/owncloud/mono/konnectd/pkg/config"
-	ocs "github.com/owncloud/mono/ocs/pkg/config"
-	phoenix "github.com/owncloud/mono/phoenix/pkg/config"
-	proxy "github.com/owncloud/mono/proxy/pkg/config"
-	reva "github.com/owncloud/mono/reva/pkg/config"
-	settings "github.com/owncloud/mono/settings/pkg/config"
-	store "github.com/owncloud/mono/store/pkg/config"
-	thumbnails "github.com/owncloud/mono/thumbnails/pkg/config"
-	webdav "github.com/owncloud/mono/webdav/pkg/config"
+	konnectd "github.com/owncloud/ocis/konnectd/pkg/config"
+	ocs "github.com/owncloud/ocis/ocs/pkg/config"
+	phoenix "github.com/owncloud/ocis/phoenix/pkg/config"
+	proxy "github.com/owncloud/ocis/proxy/pkg/config"
+	reva "github.com/owncloud/ocis/reva/pkg/config"
+	settings "github.com/owncloud/ocis/settings/pkg/config"
+	store "github.com/owncloud/ocis/store/pkg/config"
+	thumbnails "github.com/owncloud/ocis/thumbnails/pkg/config"
+	webdav "github.com/owncloud/ocis/webdav/pkg/config"
 	pman "github.com/refs/pman/pkg/config"
 )
 

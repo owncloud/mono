@@ -11,13 +11,13 @@ import (
 
 	merrors "github.com/micro/go-micro/v2/errors"
 	"github.com/micro/go-micro/v2/metadata"
-	ocislog "github.com/owncloud/mono/ocis-pkg/log"
-	"github.com/owncloud/mono/ocis-pkg/middleware"
-	"github.com/owncloud/mono/ocis-pkg/service/grpc"
-	"github.com/owncloud/mono/settings/pkg/config"
-	"github.com/owncloud/mono/settings/pkg/proto/v0"
-	svc "github.com/owncloud/mono/settings/pkg/service/v0"
-	store "github.com/owncloud/mono/settings/pkg/store/filesystem"
+	ocislog "github.com/owncloud/ocis/ocis-pkg/log"
+	"github.com/owncloud/ocis/ocis-pkg/middleware"
+	"github.com/owncloud/ocis/ocis-pkg/service/grpc"
+	"github.com/owncloud/ocis/settings/pkg/config"
+	"github.com/owncloud/ocis/settings/pkg/proto/v0"
+	svc "github.com/owncloud/ocis/settings/pkg/service/v0"
+	store "github.com/owncloud/ocis/settings/pkg/store/filesystem"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -448,17 +448,17 @@ func TestSaveGetIntValue(t *testing.T) {
 		{
 			name:  "negative",
 			value: proto.Value_IntValue{IntValue: -42},
-			// https://github.com/owncloud/mono/settings/issues/57
+			// https://github.com/owncloud/ocis/settings/issues/57
 		},
 		{
 			name:  "less than Min",
 			value: proto.Value_IntValue{IntValue: 0},
-			// https://github.com/owncloud/mono/settings/issues/57
+			// https://github.com/owncloud/ocis/settings/issues/57
 		},
 		{
 			name:  "more than Max",
 			value: proto.Value_IntValue{IntValue: 128},
-			// https://github.com/owncloud/mono/settings/issues/57
+			// https://github.com/owncloud/ocis/settings/issues/57
 		},
 	}
 	for _, tt := range tests {
@@ -500,7 +500,7 @@ func TestSaveGetIntValue(t *testing.T) {
 
 /**
 try to save a wrong type of the value
-https://github.com/owncloud/mono/settings/issues/57
+https://github.com/owncloud/ocis/settings/issues/57
 */
 func TestSaveGetIntValueIntoString(t *testing.T) {
 	teardown := setup()
@@ -536,7 +536,7 @@ func TestSaveGetIntValueIntoString(t *testing.T) {
 	assert.Equal(t, "forty two", getValueResponse.Value.Value.GetStringValue())
 }
 
-// https://github.com/owncloud/mono/settings/issues/18
+// https://github.com/owncloud/ocis/settings/issues/18
 func TestSaveBundleWithInvalidSettings(t *testing.T) {
 	var tests = []proto.Setting{
 		{
@@ -745,7 +745,7 @@ func TestSaveBundleWithInvalidSettings(t *testing.T) {
 	}
 }
 
-// https://github.com/owncloud/mono/settings/issues/19
+// https://github.com/owncloud/ocis/settings/issues/19
 func TestGetBundleNoSideEffectsOnDisk(t *testing.T) {
 	teardown := setup()
 	defer teardown()

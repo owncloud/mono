@@ -1,4 +1,4 @@
-module github.com/owncloud/mono/glauth
+module github.com/owncloud/ocis/glauth
 
 go 1.13
 
@@ -16,8 +16,6 @@ require (
 	github.com/nmcclain/ldap v0.0.0-20191021200707-3b3b69a7e9e3
 	github.com/oklog/run v1.1.0
 	github.com/openzipkin/zipkin-go v0.2.2
-	github.com/owncloud/mono/accounts v0.0.0-00010101000000-000000000000
-	github.com/owncloud/mono/ocis-pkg v0.0.0-20200911111357-8d02528b0f85
 	github.com/restic/calens v0.2.0
 	github.com/rs/zerolog v1.19.0
 	github.com/spf13/viper v1.7.0
@@ -25,7 +23,7 @@ require (
 )
 
 replace (
-	github.com/owncloud/mono/accounts => ../accounts
-	github.com/owncloud/mono/ocis-pkg => ../ocis-pkg
+	github.com/owncloud/ocis/accounts => ../accounts
+	github.com/owncloud/ocis/ocis-pkg => ../ocis-pkg
 	google.golang.org/grpc => google.golang.org/grpc v1.26.0
 )

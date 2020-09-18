@@ -1,6 +1,6 @@
 ---
 title: Konnectd
-geekdocRepo: https://github.com/owncloud/mono/konnectd
+geekdocRepo: https://github.com/owncloud/ocis/konnectd
 geekdocEditPath: edit/master/docs
 geekdocFilePath: _index.md
 ---

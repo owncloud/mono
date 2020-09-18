@@ -1,4 +1,4 @@
-module github.com/owncloud/mono/accounts
+module github.com/owncloud/ocis/accounts
 
 go 1.13
 
@@ -14,9 +14,9 @@ require (
 	github.com/micro/go-micro/v2 v2.9.1
 	github.com/oklog/run v1.1.0
 	github.com/olekukonko/tablewriter v0.0.4
-	github.com/owncloud/mono/ocis-pkg v0.0.0-20200911111357-8d02528b0f85
-	github.com/owncloud/mono/settings v0.0.0-20200911111357-8d02528b0f85
 	github.com/owncloud/ocis v1.0.0-rc1 // indirect
+	github.com/owncloud/ocis/ocis-pkg v0.0.0-00010101000000-000000000000
+	github.com/owncloud/ocis/settings v0.0.0-00010101000000-000000000000
 	github.com/restic/calens v0.2.0
 	github.com/rs/zerolog v1.19.0
 	github.com/spf13/viper v1.7.0
@@ -28,7 +28,7 @@ require (
 )
 
 replace (
-	github.com/owncloud/mono/ocis-pkg => ../ocis-pkg
-	github.com/owncloud/mono/settings => ../settings
+	github.com/owncloud/ocis/ocis-pkg => ../ocis-pkg
+	github.com/owncloud/ocis/settings => ../settings
 	google.golang.org/grpc => google.golang.org/grpc v1.26.0
 )

@@ -4,11 +4,11 @@ package command
 
 import (
 	"github.com/micro/cli/v2"
-	"github.com/owncloud/mono/reva/pkg/command"
-	svcconfig "github.com/owncloud/mono/reva/pkg/config"
-	"github.com/owncloud/mono/reva/pkg/flagset"
-	"github.com/owncloud/mono/ocis/pkg/config"
-	"github.com/owncloud/mono/ocis/pkg/register"
+	"github.com/owncloud/ocis/reva/pkg/command"
+	svcconfig "github.com/owncloud/ocis/reva/pkg/config"
+	"github.com/owncloud/ocis/reva/pkg/flagset"
+	"github.com/owncloud/ocis/ocis/pkg/config"
+	"github.com/owncloud/ocis/ocis/pkg/register"
 )
 
 // RevaStorageOCCommand is the entrypoint for the reva-storage-oc command.

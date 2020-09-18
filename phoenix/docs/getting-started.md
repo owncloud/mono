@@ -216,7 +216,7 @@ In case you want to render any additional properties in the config.json you can 
 
 ### Configuration file
 
-So far we support the file formats `JSON` and `YAML`, if you want to get a full example configuration just take a look at [our repository](https://github.com/owncloud/mono/phoenix/tree/master/config), there you can always see the latest configuration format. These example configurations include all available options and the default values. The configuration file will be automatically loaded if it's placed at `/etc/ocis/phoenix.yml`, `${HOME}/.ocis/phoenix.yml` or `$(pwd)/config/phoenix.yml`.
+So far we support the file formats `JSON` and `YAML`, if you want to get a full example configuration just take a look at [our repository](https://github.com/owncloud/ocis/phoenix/tree/master/config), there you can always see the latest configuration format. These example configurations include all available options and the default values. The configuration file will be automatically loaded if it's placed at `/etc/ocis/phoenix.yml`, `${HOME}/.ocis/phoenix.yml` or `$(pwd)/config/phoenix.yml`.
 
 ## Usage
 

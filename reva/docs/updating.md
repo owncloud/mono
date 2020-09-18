@@ -2,7 +2,7 @@
 title: "Updating reva"
 date: 2020-05-22T00:00:00+00:00
 weight: 50
-geekdocRepo: https://github.com/owncloud/mono/reva
+geekdocRepo: https://github.com/owncloud/ocis/reva
 geekdocEditPath: edit/master/docs
 geekdocFilePath: updating.md
 ---

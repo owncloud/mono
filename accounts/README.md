@@ -3,8 +3,8 @@
 [![Build Status](https://cloud.drone.io/api/badges/owncloud/ocis-accounts/status.svg)](https://cloud.drone.io/owncloud/ocis-accounts)
 [![Gitter chat](https://badges.gitter.im/cs3org/reva.svg)](https://gitter.im/cs3org/reva)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d005a4722c1b463b9b95060479018e99)](https://www.codacy.com/gh/owncloud/ocis-accounts?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=owncloud/ocis-accounts&amp;utm_campaign=Badge_Grade)
-[![Go Doc](https://godoc.org/github.com/owncloud/mono/accounts?status.svg)](http://godoc.org/github.com/owncloud/mono/accounts)
-[![Go Report](http://goreportcard.com/badge/github.com/owncloud/mono/accounts)](http://goreportcard.com/report/github.com/owncloud/mono/accounts)
+[![Go Doc](https://godoc.org/github.com/owncloud/ocis/accounts?status.svg)](http://godoc.org/github.com/owncloud/ocis/accounts)
+[![Go Report](http://goreportcard.com/badge/github.com/owncloud/ocis/accounts)](http://goreportcard.com/report/github.com/owncloud/ocis/accounts)
 [![](https://images.microbadger.com/badges/image/owncloud/ocis-accounts.svg)](http://microbadger.com/images/owncloud/ocis-accounts "Get your own image badge on microbadger.com")
 
 **This project is under heavy development, it's not in a working state yet!**
@@ -18,7 +18,7 @@ You can download prebuilt binaries from the GitHub releases or from our [downloa
 Make sure you have a working Go environment, for further reference or a guide take a look at the [install instructions](http://golang.org/doc/install.html). This project requires Go >= v1.13.
 
 ```console
-git clone https://github.com/owncloud/mono/accounts.git
+git clone https://github.com/owncloud/ocis/accounts.git
 cd ocis-accounts
 
 make generate build

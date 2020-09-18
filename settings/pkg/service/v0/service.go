@@ -7,13 +7,13 @@ import (
 	"github.com/golang/protobuf/ptypes/empty"
 	merrors "github.com/micro/go-micro/v2/errors"
 	"github.com/micro/go-micro/v2/metadata"
-	"github.com/owncloud/mono/ocis-pkg/log"
-	"github.com/owncloud/mono/ocis-pkg/middleware"
-	"github.com/owncloud/mono/ocis-pkg/roles"
-	"github.com/owncloud/mono/settings/pkg/config"
-	"github.com/owncloud/mono/settings/pkg/proto/v0"
-	"github.com/owncloud/mono/settings/pkg/settings"
-	store "github.com/owncloud/mono/settings/pkg/store/filesystem"
+	"github.com/owncloud/ocis/ocis-pkg/log"
+	"github.com/owncloud/ocis/ocis-pkg/middleware"
+	"github.com/owncloud/ocis/ocis-pkg/roles"
+	"github.com/owncloud/ocis/settings/pkg/config"
+	"github.com/owncloud/ocis/settings/pkg/proto/v0"
+	"github.com/owncloud/ocis/settings/pkg/settings"
+	store "github.com/owncloud/ocis/settings/pkg/store/filesystem"
 )
 
 // Service represents a service.

@@ -1,4 +1,4 @@
-module github.com/owncloud/mono/thumbnails
+module github.com/owncloud/ocis/thumbnails
 
 go 1.13
 
@@ -20,7 +20,7 @@ require (
 	github.com/ogier/pflag v0.0.1
 	github.com/oklog/run v1.0.0
 	github.com/openzipkin/zipkin-go v0.2.2
-	github.com/owncloud/mono/ocis-pkg v0.0.0-00010101000000-000000000000
+	github.com/owncloud/ocis/ocis-pkg v0.0.0-00010101000000-000000000000
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus/client_golang v1.7.1
 	github.com/restic/calens v0.2.0
@@ -31,6 +31,6 @@ require (
 )
 
 replace (
-	github.com/owncloud/mono/ocis-pkg => ../ocis-pkg
+	github.com/owncloud/ocis/ocis-pkg => ../ocis-pkg
 	google.golang.org/grpc => google.golang.org/grpc v1.26.0
 )

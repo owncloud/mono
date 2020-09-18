@@ -2,7 +2,7 @@
 title: "Configuration"
 date: "2020-09-09T12:38:00+0200"
 weight: 20
-geekdocRepo: https://github.com/owncloud/mono/reva
+geekdocRepo: https://github.com/owncloud/ocis/reva
 geekdocEditPath: edit/master/docs
 geekdocFilePath: configuration.md
 ---

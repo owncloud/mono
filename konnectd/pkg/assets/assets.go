@@ -5,8 +5,8 @@ import (
 	"os"
 	"path"
 
-	"github.com/owncloud/mono/konnectd/pkg/config"
-	"github.com/owncloud/mono/ocis-pkg/log"
+	"github.com/owncloud/ocis/konnectd/pkg/config"
+	"github.com/owncloud/ocis/ocis-pkg/log"
 )
 
 //go:generate go run github.com/UnnoTed/fileb0x embed.yml

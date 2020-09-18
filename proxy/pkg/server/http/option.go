@@ -6,9 +6,9 @@ import (
 
 	"github.com/justinas/alice"
 	"github.com/micro/cli/v2"
-	"github.com/owncloud/mono/ocis-pkg/log"
-	"github.com/owncloud/mono/proxy/pkg/config"
-	"github.com/owncloud/mono/proxy/pkg/metrics"
+	"github.com/owncloud/ocis/ocis-pkg/log"
+	"github.com/owncloud/ocis/proxy/pkg/config"
+	"github.com/owncloud/ocis/proxy/pkg/metrics"
 )
 
 // Option defines a single option function.

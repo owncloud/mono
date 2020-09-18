@@ -1,4 +1,4 @@
-module github.com/owncloud/mono/phoenix
+module github.com/owncloud/ocis/phoenix
 
 go 1.13
 
@@ -12,7 +12,7 @@ require (
 	github.com/micro/go-micro v1.18.0 // indirect
 	github.com/oklog/run v1.0.0
 	github.com/openzipkin/zipkin-go v0.2.2
-	github.com/owncloud/mono/ocis-pkg v0.0.0-00010101000000-000000000000
+	github.com/owncloud/ocis/ocis-pkg v0.0.0-00010101000000-000000000000
 	github.com/owncloud/ocis-phoenix v0.13.0 // indirect
 	github.com/owncloud/ocis-pkg v1.3.0 // indirect
 	github.com/restic/calens v0.2.0
@@ -22,6 +22,6 @@ require (
 )
 
 replace (
-	github.com/owncloud/mono/ocis-pkg => ../ocis-pkg
+	github.com/owncloud/ocis/ocis-pkg => ../ocis-pkg
 	google.golang.org/grpc => google.golang.org/grpc v1.26.0
 )

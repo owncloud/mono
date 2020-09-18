@@ -3,8 +3,8 @@
 [![Build Status](https://cloud.drone.io/api/badges/owncloud/ocis-thumbnails/status.svg)](https://cloud.drone.io/owncloud/ocis-thumbnails)
 [![Gitter chat](https://badges.gitter.im/cs3org/reva.svg)](https://gitter.im/cs3org/reva)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5dcc0c9b2319462dbbe517d90219062c)](https://www.codacy.com/gh/owncloud/ocis-thumbnails?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=owncloud/ocis-thumbnails&amp;utm_campaign=Badge_Grade)
-[![Go Doc](https://godoc.org/github.com/owncloud/mono/thumbnails?status.svg)](http://godoc.org/github.com/owncloud/mono/thumbnails)
-[![Go Report](http://goreportcard.com/badge/github.com/owncloud/mono/thumbnails)](http://goreportcard.com/report/github.com/owncloud/mono/thumbnails)
+[![Go Doc](https://godoc.org/github.com/owncloud/ocis/thumbnails?status.svg)](http://godoc.org/github.com/owncloud/ocis/thumbnails)
+[![Go Report](http://goreportcard.com/badge/github.com/owncloud/ocis/thumbnails)](http://goreportcard.com/report/github.com/owncloud/ocis/thumbnails)
 [![](https://images.microbadger.com/badges/image/owncloud/ocis-thumbnails.svg)](http://microbadger.com/images/owncloud/ocis-thumbnails "Get your own image badge on microbadger.com")
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=owncloud_ocis-thumbnails&metric=alert_status)](https://sonarcloud.io/dashboard?id=owncloud_ocis-thumbnails)
 
@@ -19,7 +19,7 @@ You can download prebuilt binaries from the GitHub releases or from our [downloa
 Make sure you have a working Go environment, for further reference or a guide take a look at the [install instructions](http://golang.org/doc/install.html). This project requires Go >= v1.13.
 
 ```console
-git clone https://github.com/owncloud/mono/thumbnails.git
+git clone https://github.com/owncloud/ocis/thumbnails.git
 cd ocis-thumbnails
 
 make generate build

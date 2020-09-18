@@ -2,7 +2,7 @@
 title: "Configuration"
 date: "2020-04-20T21:24:14+0200"
 weight: 20
-geekdocRepo: https://github.com/owncloud/mono/proxy
+geekdocRepo: https://github.com/owncloud/ocis/proxy
 geekdocEditPath: edit/master/docs
 geekdocFilePath: configuration.md
 ---

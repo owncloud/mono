@@ -7,8 +7,8 @@ import (
 	"net/rpc"
 
 	"github.com/micro/cli/v2"
-	"github.com/owncloud/mono/ocis/pkg/config"
-	"github.com/owncloud/mono/ocis/pkg/register"
+	"github.com/owncloud/ocis/ocis/pkg/config"
+	"github.com/owncloud/ocis/ocis/pkg/register"
 )
 
 // ListCommand is the entrypoint for the list command.

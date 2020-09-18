@@ -2,5 +2,5 @@ Change: Use latest ocis-accounts API
 
 Uses the latest ocis-accounts API with some adjustments.
 
-https://github.com/owncloud/mono/migration/pull/6
-https://github.com/owncloud/mono/migration/pull/8
+https://github.com/owncloud/ocis/migration/pull/6
+https://github.com/owncloud/ocis/migration/pull/8

@@ -6,11 +6,11 @@ import (
 	"gopkg.in/square/go-jose.v2/jwt"
 
 	merrors "github.com/micro/go-micro/v2/errors"
-	"github.com/owncloud/mono/ocis-pkg/log"
-	v0proto "github.com/owncloud/mono/thumbnails/pkg/proto/v0"
-	"github.com/owncloud/mono/thumbnails/pkg/thumbnail"
-	"github.com/owncloud/mono/thumbnails/pkg/thumbnail/imgsource"
-	"github.com/owncloud/mono/thumbnails/pkg/thumbnail/resolution"
+	"github.com/owncloud/ocis/ocis-pkg/log"
+	v0proto "github.com/owncloud/ocis/thumbnails/pkg/proto/v0"
+	"github.com/owncloud/ocis/thumbnails/pkg/thumbnail"
+	"github.com/owncloud/ocis/thumbnails/pkg/thumbnail/imgsource"
+	"github.com/owncloud/ocis/thumbnails/pkg/thumbnail/resolution"
 	"github.com/pkg/errors"
 )
 

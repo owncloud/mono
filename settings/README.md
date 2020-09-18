@@ -2,8 +2,8 @@
 
 [![Build Status](https://cloud.drone.io/api/badges/owncloud/ocis-settings/status.svg)](https://cloud.drone.io/owncloud/ocis-settings)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4383f209aa904572b415ef5a8f9e379f)](https://www.codacy.com/gh/owncloud/ocis-settings?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=owncloud/ocis-settings&amp;utm_campaign=Badge_Grade)
-[![Go Doc](https://godoc.org/github.com/owncloud/mono/settings?status.svg)](http://godoc.org/github.com/owncloud/mono/settings)
-[![Go Report Card](https://goreportcard.com/badge/github.com/owncloud/mono/settings)](https://goreportcard.com/report/github.com/owncloud/mono/settings)
+[![Go Doc](https://godoc.org/github.com/owncloud/ocis/settings?status.svg)](http://godoc.org/github.com/owncloud/ocis/settings)
+[![Go Report Card](https://goreportcard.com/badge/github.com/owncloud/ocis/settings)](https://goreportcard.com/report/github.com/owncloud/ocis/settings)
 [![](https://images.microbadger.com/badges/image/owncloud/ocis-settings.svg)](https://microbadger.com/images/owncloud/ocis-settings "Get your own image badge on microbadger.com")
 
 **This project is under heavy development, it's not in a working state yet!**
@@ -17,7 +17,7 @@ You can download prebuilt binaries from the GitHub releases or from our [downloa
 Make sure you have a working Go environment, for further reference or a guide take a look at the [install instructions](http://golang.org/doc/install.html). This project requires Go >= v1.13.
 
 ```console
-git clone https://github.com/owncloud/mono/settings.git
+git clone https://github.com/owncloud/ocis/settings.git
 cd ocis-settings
 
 make generate build

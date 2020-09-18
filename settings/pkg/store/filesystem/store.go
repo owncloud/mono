@@ -4,9 +4,9 @@ package store
 import (
 	"os"
 
-	olog "github.com/owncloud/mono/ocis-pkg/log"
-	"github.com/owncloud/mono/settings/pkg/config"
-	"github.com/owncloud/mono/settings/pkg/settings"
+	olog "github.com/owncloud/ocis/ocis-pkg/log"
+	"github.com/owncloud/ocis/settings/pkg/config"
+	"github.com/owncloud/ocis/settings/pkg/settings"
 )
 
 var (

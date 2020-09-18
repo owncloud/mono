@@ -16,20 +16,20 @@ package http
 //	"testing"
 //
 //	"github.com/golang/protobuf/ptypes/empty"
-//	"github.com/owncloud/mono/ocs/pkg/config"
-//	svc "github.com/owncloud/mono/ocs/pkg/service/v0"
-//	ocisLog "github.com/owncloud/mono/ocis-pkg/log"
+//	"github.com/owncloud/ocis/ocs/pkg/config"
+//	svc "github.com/owncloud/ocis/ocs/pkg/service/v0"
+//	ocisLog "github.com/owncloud/ocis/ocis-pkg/log"
 //	"github.com/stretchr/testify/assert"
 //
-//	"github.com/owncloud/mono/ocis-pkg/service/grpc"
+//	"github.com/owncloud/ocis/ocis-pkg/service/grpc"
 //
-//	accountsCmd "github.com/owncloud/mono/accounts/pkg/command"
-//	accountsCfg "github.com/owncloud/mono/accounts/pkg/config"
-//	accountsProto "github.com/owncloud/mono/accounts/pkg/proto/v0"
-//	accountsSvc "github.com/owncloud/mono/accounts/pkg/service/v0"
+//	accountsCmd "github.com/owncloud/ocis/accounts/pkg/command"
+//	accountsCfg "github.com/owncloud/ocis/accounts/pkg/config"
+//	accountsProto "github.com/owncloud/ocis/accounts/pkg/proto/v0"
+//	accountsSvc "github.com/owncloud/ocis/accounts/pkg/service/v0"
 //
 //	"github.com/micro/go-micro/v2/client"
-//	settings "github.com/owncloud/mono/settings/pkg/proto/v0"
+//	settings "github.com/owncloud/ocis/settings/pkg/proto/v0"
 //)
 //
 //var service = grpc.Service{}
@@ -200,7 +200,7 @@ package http
 //	}
 //
 //	// FIXME: gidnumber and Uidnumber are always 0
-//	// https://github.com/owncloud/mono/ocs/issues/45
+//	// https://github.com/owncloud/ocis/ocs/issues/45
 //	assert.Equal(t, 0, actual.UIDNumber, "UidNumber doesn't match for user %v", expected.Username)
 //	assert.Equal(t, 0, actual.GIDNumber, "GIDNumber doesn't match for user %v", expected.Username)
 //
@@ -403,7 +403,7 @@ package http
 //		},
 //
 //		// User withoutl password
-//		// https://github.com/owncloud/mono/ocs/issues/50
+//		// https://github.com/owncloud/ocis/ocs/issues/50
 //		{
 //			User{
 //				Enabled:     "true",
@@ -416,7 +416,7 @@ package http
 //		},
 //
 //		// User with special character in username
-//		// https://github.com/owncloud/mono/ocs/issues/49
+//		// https://github.com/owncloud/ocis/ocs/issues/49
 //		{
 //			User{
 //				Enabled:     "true",
@@ -964,7 +964,7 @@ package http
 //			nil,
 //		},
 //		// Invalid email doesn't gives error
-//		// https://github.com/owncloud/mono/ocs/issues/46
+//		// https://github.com/owncloud/ocis/ocs/issues/46
 //		{
 //			"email",
 //			"not_a_valid_email",
@@ -981,7 +981,7 @@ package http
 //			nil,
 //		},
 //		// Empty values doesn't gives error
-//		// https://github.com/owncloud/mono/ocs/issues/51
+//		// https://github.com/owncloud/ocis/ocs/issues/51
 //		{
 //			"email",
 //			"",

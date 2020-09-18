@@ -4,10 +4,10 @@ import (
 	"context"
 
 	"github.com/micro/cli/v2"
-	"github.com/owncloud/mono/accounts/pkg/config"
-	"github.com/owncloud/mono/accounts/pkg/metrics"
-	svc "github.com/owncloud/mono/accounts/pkg/service/v0"
-	"github.com/owncloud/mono/ocis-pkg/log"
+	"github.com/owncloud/ocis/accounts/pkg/config"
+	"github.com/owncloud/ocis/accounts/pkg/metrics"
+	svc "github.com/owncloud/ocis/accounts/pkg/service/v0"
+	"github.com/owncloud/ocis/ocis-pkg/log"
 )
 
 // Option defines a single option function.

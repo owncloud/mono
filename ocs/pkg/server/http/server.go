@@ -1,10 +1,10 @@
 package http
 
 import (
-	svc "github.com/owncloud/mono/ocs/pkg/service/v0"
-	"github.com/owncloud/mono/ocs/pkg/version"
-	"github.com/owncloud/mono/ocis-pkg/middleware"
-	"github.com/owncloud/mono/ocis-pkg/service/http"
+	svc "github.com/owncloud/ocis/ocs/pkg/service/v0"
+	"github.com/owncloud/ocis/ocs/pkg/version"
+	"github.com/owncloud/ocis/ocis-pkg/middleware"
+	"github.com/owncloud/ocis/ocis-pkg/service/http"
 )
 
 // Server initializes the http service and server.

@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	olog "github.com/owncloud/mono/ocis-pkg/log"
-	"github.com/owncloud/mono/settings/pkg/proto/v0"
+	olog "github.com/owncloud/ocis/ocis-pkg/log"
+	"github.com/owncloud/ocis/settings/pkg/proto/v0"
 	"github.com/stretchr/testify/assert"
 )
 

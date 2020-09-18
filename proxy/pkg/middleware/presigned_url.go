@@ -8,10 +8,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/owncloud/mono/ocis-pkg/log"
-	ocisoidc "github.com/owncloud/mono/ocis-pkg/oidc"
-	"github.com/owncloud/mono/proxy/pkg/config"
-	storepb "github.com/owncloud/mono/store/pkg/proto/v0"
+	"github.com/owncloud/ocis/ocis-pkg/log"
+	ocisoidc "github.com/owncloud/ocis/ocis-pkg/oidc"
+	"github.com/owncloud/ocis/proxy/pkg/config"
+	storepb "github.com/owncloud/ocis/store/pkg/proto/v0"
 	"golang.org/x/crypto/pbkdf2"
 )
 

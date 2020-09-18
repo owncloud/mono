@@ -3,10 +3,10 @@ package svc
 import (
 	"net/http"
 
-	"github.com/owncloud/mono/ocis-pkg/log"
-	"github.com/owncloud/mono/thumbnails/pkg/config"
-	"github.com/owncloud/mono/thumbnails/pkg/thumbnail/imgsource"
-	"github.com/owncloud/mono/thumbnails/pkg/thumbnail/storage"
+	"github.com/owncloud/ocis/ocis-pkg/log"
+	"github.com/owncloud/ocis/thumbnails/pkg/config"
+	"github.com/owncloud/ocis/thumbnails/pkg/thumbnail/imgsource"
+	"github.com/owncloud/ocis/thumbnails/pkg/thumbnail/storage"
 )
 
 // Option defines a single option function.

@@ -1,4 +1,4 @@
-module github.com/owncloud/mono/ocis
+module github.com/owncloud/ocis/ocis
 
 go 1.13
 
@@ -11,18 +11,17 @@ require (
 	github.com/micro/micro/v2 v2.8.0
 	github.com/openzipkin/zipkin-go v0.2.2
 	github.com/owncloud/flaex v0.2.0
-	github.com/owncloud/mono/accounts v0.4.2-0.20200901074457-6a27781a2741
-	github.com/owncloud/mono/glauth v0.0.0-00010101000000-000000000000
-	github.com/owncloud/mono/konnectd v0.0.0-00010101000000-000000000000
-	github.com/owncloud/mono/ocis-pkg v0.1.0
-	github.com/owncloud/mono/ocs v0.0.0-00010101000000-000000000000
-	github.com/owncloud/mono/phoenix v0.0.0-00010101000000-000000000000
-	github.com/owncloud/mono/proxy v0.0.0-00010101000000-000000000000
-	github.com/owncloud/mono/reva v0.0.0-00010101000000-000000000000
-	github.com/owncloud/mono/settings v0.0.0-20200914113019-7c3cfd3f8756
-	github.com/owncloud/mono/store v0.0.0-20200914113019-7c3cfd3f8756
-	github.com/owncloud/mono/thumbnails v0.1.6
-	github.com/owncloud/mono/webdav v0.0.0-00010101000000-000000000000
+	github.com/owncloud/ocis/accounts v0.4.2-0.20200901074457-6a27781a2741
+	github.com/owncloud/ocis/glauth v0.0.0-00010101000000-000000000000
+	github.com/owncloud/ocis/konnectd v0.0.0-00010101000000-000000000000
+	github.com/owncloud/ocis/ocs v0.0.0-00010101000000-000000000000
+	github.com/owncloud/ocis/phoenix v0.0.0-00010101000000-000000000000
+	github.com/owncloud/ocis/proxy v0.0.0-00010101000000-000000000000
+	github.com/owncloud/ocis/reva v0.0.0-00010101000000-000000000000
+	github.com/owncloud/ocis/settings v0.0.0-20200914113019-7c3cfd3f8756
+	github.com/owncloud/ocis/store v0.0.0-20200914113019-7c3cfd3f8756
+	github.com/owncloud/ocis/thumbnails v0.1.6
+	github.com/owncloud/ocis/webdav v0.0.0-00010101000000-000000000000
 	github.com/owncloud/ocis v1.0.0-rc1 // indirect
 	github.com/owncloud/ocis-glauth v0.5.1-0.20200909064150-0735ec933777 // indirect
 	github.com/owncloud/ocis-graph v0.0.0-20200318175820-9a5a6e029db7
@@ -39,17 +38,17 @@ require (
 
 replace (
 	github.com/gomodule/redigo => github.com/gomodule/redigo v1.8.2
-	github.com/owncloud/mono/accounts => ../accounts
-	github.com/owncloud/mono/glauth => ../glauth
-	github.com/owncloud/mono/konnectd => ../konnectd
-	github.com/owncloud/mono/ocis-pkg => ../ocis-pkg
-	github.com/owncloud/mono/ocs => ../ocs
-	github.com/owncloud/mono/phoenix => ../phoenix
-	github.com/owncloud/mono/proxy => ../proxy
-	github.com/owncloud/mono/reva => ../reva
-	github.com/owncloud/mono/settings => ../settings
-	github.com/owncloud/mono/store => ../store
-	github.com/owncloud/mono/thumbnails => ../thumbnails
-	github.com/owncloud/mono/webdav => ../webdav
+	github.com/owncloud/ocis/accounts => ../accounts
+	github.com/owncloud/ocis/glauth => ../glauth
+	github.com/owncloud/ocis/konnectd => ../konnectd
+	github.com/owncloud/ocis/ocis-pkg => ../ocis-pkg
+	github.com/owncloud/ocis/ocs => ../ocs
+	github.com/owncloud/ocis/phoenix => ../phoenix
+	github.com/owncloud/ocis/proxy => ../proxy
+	github.com/owncloud/ocis/reva => ../reva
+	github.com/owncloud/ocis/settings => ../settings
+	github.com/owncloud/ocis/store => ../store
+	github.com/owncloud/ocis/thumbnails => ../thumbnails
+	github.com/owncloud/ocis/webdav => ../webdav
 	google.golang.org/grpc => google.golang.org/grpc v1.26.0
 )

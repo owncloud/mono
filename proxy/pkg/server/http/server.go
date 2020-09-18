@@ -4,9 +4,9 @@ import (
 	"crypto/tls"
 	"os"
 
-	svc "github.com/owncloud/mono/ocis-pkg/service/http"
-	"github.com/owncloud/mono/proxy/pkg/crypto"
-	"github.com/owncloud/mono/proxy/pkg/version"
+	svc "github.com/owncloud/ocis/ocis-pkg/service/http"
+	"github.com/owncloud/ocis/proxy/pkg/crypto"
+	"github.com/owncloud/ocis/proxy/pkg/version"
 )
 
 // Server initializes the http service and server.

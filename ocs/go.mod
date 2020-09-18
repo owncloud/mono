@@ -1,4 +1,4 @@
-module github.com/owncloud/mono/ocs
+module github.com/owncloud/ocis/ocs
 
 go 1.13
 
@@ -16,10 +16,10 @@ require (
 	github.com/micro/go-micro/v2 v2.9.1
 	github.com/oklog/run v1.1.0
 	github.com/openzipkin/zipkin-go v0.2.2
-	github.com/owncloud/mono/accounts v0.0.0-00010101000000-000000000000
-	github.com/owncloud/mono/ocis-pkg v0.0.0-20200914113019-7c3cfd3f8756
-	github.com/owncloud/mono/settings v0.0.0-20200914113019-7c3cfd3f8756
-	github.com/owncloud/mono/store v0.0.0-20200914113019-7c3cfd3f8756
+	github.com/owncloud/ocis/accounts v0.0.0-00010101000000-000000000000
+	github.com/owncloud/ocis/ocis-pkg v0.0.0-20200914113019-7c3cfd3f8756
+	github.com/owncloud/ocis/settings v0.0.0-20200914113019-7c3cfd3f8756
+	github.com/owncloud/ocis/store v0.0.0-20200914113019-7c3cfd3f8756
 	github.com/restic/calens v0.2.0
 	github.com/spf13/viper v1.7.0
 	github.com/stretchr/testify v1.6.1
@@ -29,8 +29,8 @@ require (
 )
 
 replace (
-	github.com/owncloud/mono/accounts => ../accounts
-	github.com/owncloud/mono/ocis-pkg => ../ocis-pkg
-	github.com/owncloud/mono/settings => ../settings
+	github.com/owncloud/ocis/accounts => ../accounts
+	github.com/owncloud/ocis/ocis-pkg => ../ocis-pkg
+	github.com/owncloud/ocis/settings => ../settings
 	google.golang.org/grpc => google.golang.org/grpc v1.26.0
 )

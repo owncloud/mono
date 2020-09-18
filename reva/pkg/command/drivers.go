@@ -1,7 +1,7 @@
 package command
 
 import (
-	"github.com/owncloud/mono/reva/pkg/config"
+	"github.com/owncloud/ocis/reva/pkg/config"
 )
 
 func drivers(cfg *config.Config) map[string]interface{} {

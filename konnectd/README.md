@@ -3,8 +3,8 @@
 [![Build Status](https://cloud.drone.io/api/badges/owncloud/ocis-konnectd/status.svg)](https://cloud.drone.io/owncloud/ocis-konnectd)
 [![Gitter chat](https://badges.gitter.im/cs3org/reva.svg)](https://gitter.im/cs3org/reva)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f6f9033737404c9da3ba4738b6501bdb)](https://www.codacy.com/manual/owncloud/ocis-konnectd?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=owncloud/ocis-konnectd&amp;utm_campaign=Badge_Grade)
-[![Go Doc](https://godoc.org/github.com/owncloud/mono/konnectd?status.svg)](http://godoc.org/github.com/owncloud/mono/konnectd)
-[![Go Report](http://goreportcard.com/badge/github.com/owncloud/mono/konnectd)](http://goreportcard.com/report/github.com/owncloud/mono/konnectd)
+[![Go Doc](https://godoc.org/github.com/owncloud/ocis/konnectd?status.svg)](http://godoc.org/github.com/owncloud/ocis/konnectd)
+[![Go Report](http://goreportcard.com/badge/github.com/owncloud/ocis/konnectd)](http://goreportcard.com/report/github.com/owncloud/ocis/konnectd)
 [![](https://images.microbadger.com/badges/image/owncloud/ocis-konnectd.svg)](http://microbadger.com/images/owncloud/ocis-konnectd "Get your own image badge on microbadger.com")
 
 **This project is under heavy development, it's not in a working state yet!**
@@ -18,7 +18,7 @@ You can download prebuilt binaries from the GitHub releases or from our [downloa
 Make sure you have a working Go environment, for further reference or a guide take a look at the [install instructions](http://golang.org/doc/install.html). This project requires Go >= v1.13.
 
 ```console
-git clone https://github.com/owncloud/mono/konnectd.git
+git clone https://github.com/owncloud/ocis/konnectd.git
 cd ocis-konnectd
 
 make generate build

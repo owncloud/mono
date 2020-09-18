@@ -2,7 +2,7 @@
 title: "Releasing"
 date: 2020-05-22T00:00:00+00:00
 weight: 60
-geekdocRepo: https://github.com/owncloud/mono/reva
+geekdocRepo: https://github.com/owncloud/ocis/reva
 geekdocEditPath: edit/master/docs
 geekdocFilePath: releasing.md
 ---

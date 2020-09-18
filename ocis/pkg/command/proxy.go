@@ -4,11 +4,11 @@ package command
 
 import (
 	"github.com/micro/cli/v2"
-	"github.com/owncloud/mono/proxy/pkg/command"
-	svcconfig "github.com/owncloud/mono/proxy/pkg/config"
-	"github.com/owncloud/mono/proxy/pkg/flagset"
-	"github.com/owncloud/mono/ocis/pkg/config"
-	"github.com/owncloud/mono/ocis/pkg/register"
+	"github.com/owncloud/ocis/proxy/pkg/command"
+	svcconfig "github.com/owncloud/ocis/proxy/pkg/config"
+	"github.com/owncloud/ocis/proxy/pkg/flagset"
+	"github.com/owncloud/ocis/ocis/pkg/config"
+	"github.com/owncloud/ocis/ocis/pkg/register"
 )
 
 // ProxyCommand is the entry point for the proxy command.

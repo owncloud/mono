@@ -4,10 +4,10 @@ import (
 	"strings"
 
 	"github.com/micro/cli/v2"
-	"github.com/owncloud/mono/phoenix/pkg/command"
-	"github.com/owncloud/mono/phoenix/pkg/flagset"
-	"github.com/owncloud/mono/ocis/pkg/config"
-	"github.com/owncloud/mono/ocis/pkg/register"
+	"github.com/owncloud/ocis/phoenix/pkg/command"
+	"github.com/owncloud/ocis/phoenix/pkg/flagset"
+	"github.com/owncloud/ocis/ocis/pkg/config"
+	"github.com/owncloud/ocis/ocis/pkg/register"
 )
 
 // PhoenixCommand is the entrypoint for the phoenix command.

@@ -2,7 +2,7 @@
 title: "Configuration"
 date: "2020-04-20T13:18:32+0200"
 weight: 20
-geekdocRepo: https://github.com/owncloud/mono/konnectd
+geekdocRepo: https://github.com/owncloud/ocis/konnectd
 geekdocEditPath: edit/master/docs
 geekdocFilePath: configuration.md
 ---

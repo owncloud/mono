@@ -1,8 +1,8 @@
 package grpc
 
 import (
-	"github.com/owncloud/mono/accounts/pkg/proto/v0"
-	"github.com/owncloud/mono/ocis-pkg/service/grpc"
+	"github.com/owncloud/ocis/accounts/pkg/proto/v0"
+	"github.com/owncloud/ocis/ocis-pkg/service/grpc"
 )
 
 // Server initializes a new go-micro service ready to run

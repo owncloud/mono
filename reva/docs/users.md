@@ -2,7 +2,7 @@
 title: "Users"
 date: 2020-01-16T00:00:00+00:00
 weight: 35
-geekdocRepo: https://github.com/owncloud/mono/reva
+geekdocRepo: https://github.com/owncloud/ocis/reva
 geekdocEditPath: edit/master/docs
 geekdocFilePath: users.md
 ---

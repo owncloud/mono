@@ -4,11 +4,11 @@ package command
 
 import (
 	"github.com/micro/cli/v2"
-	"github.com/owncloud/mono/ocs/pkg/command"
-	svcconfig "github.com/owncloud/mono/ocs/pkg/config"
-	"github.com/owncloud/mono/ocs/pkg/flagset"
-	"github.com/owncloud/mono/ocis/pkg/config"
-	"github.com/owncloud/mono/ocis/pkg/register"
+	"github.com/owncloud/ocis/ocs/pkg/command"
+	svcconfig "github.com/owncloud/ocis/ocs/pkg/config"
+	"github.com/owncloud/ocis/ocs/pkg/flagset"
+	"github.com/owncloud/ocis/ocis/pkg/config"
+	"github.com/owncloud/ocis/ocis/pkg/register"
 )
 
 // OCSCommand is the entrypoint for the ocs command.

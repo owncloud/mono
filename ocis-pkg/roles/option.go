@@ -3,8 +3,8 @@ package roles
 import (
 	"time"
 
-	"github.com/owncloud/mono/ocis-pkg/log"
-	settings "github.com/owncloud/mono/settings/pkg/proto/v0"
+	"github.com/owncloud/ocis/ocis-pkg/log"
+	settings "github.com/owncloud/ocis/settings/pkg/proto/v0"
 )
 
 // Options are all the possible options.

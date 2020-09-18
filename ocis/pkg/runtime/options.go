@@ -2,7 +2,7 @@ package runtime
 
 import (
 	"github.com/micro/cli/v2"
-	"github.com/owncloud/mono/ocis-pkg/log"
+	"github.com/owncloud/ocis/ocis-pkg/log"
 )
 
 // Options is a runtime option

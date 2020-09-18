@@ -4,9 +4,9 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/owncloud/mono/ocis-pkg/service/debug"
-	"github.com/owncloud/mono/thumbnails/pkg/config"
-	"github.com/owncloud/mono/thumbnails/pkg/version"
+	"github.com/owncloud/ocis/ocis-pkg/service/debug"
+	"github.com/owncloud/ocis/thumbnails/pkg/config"
+	"github.com/owncloud/ocis/thumbnails/pkg/version"
 )
 
 // Server initializes the debug service and server.

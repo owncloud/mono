@@ -6,11 +6,11 @@ import (
 	"strings"
 
 	"github.com/micro/cli/v2"
-	"github.com/owncloud/mono/ocis/pkg/config"
-	"github.com/owncloud/mono/ocis/pkg/flagset"
-	"github.com/owncloud/mono/ocis/pkg/register"
-	"github.com/owncloud/mono/ocis/pkg/runtime"
-	"github.com/owncloud/mono/ocis/pkg/tracing"
+	"github.com/owncloud/ocis/ocis/pkg/config"
+	"github.com/owncloud/ocis/ocis/pkg/flagset"
+	"github.com/owncloud/ocis/ocis/pkg/register"
+	"github.com/owncloud/ocis/ocis/pkg/runtime"
+	"github.com/owncloud/ocis/ocis/pkg/tracing"
 )
 
 // Server is the entrypoint for the server command.

@@ -792,7 +792,7 @@ github.com/ory/herodot v0.6.2/go.mod h1:3BOneqcyBsVybCPAJoi92KN2BpJHcmDqAMcAAaJi
 github.com/ory/viper v1.5.6/go.mod h1:TYmpFpKLxjQwvT4f0QPpkOn4sDXU1kDgAwJpgLYiQ28=
 github.com/ory/x v0.0.85/go.mod h1:s44V8t3xyjWZREcU+mWlp4h302rTuM4aLXcW+y5FbQ8=
 github.com/ovh/go-ovh v0.0.0-20181109152953-ba5adb4cf014/go.mod h1:joRatxRJaZBsY3JAOEMcoOp05CnZzsx4scTxi95DHyQ=
-github.com/owncloud/mono/settings v0.0.0-20200911111357-8d02528b0f85/go.mod h1:wJKbYRV3aTO/56RPoDGrw1FN9Ns9vOEt7Qhsdn4Rs+g=
+github.com/owncloud/ocis/settings v0.0.0-20200911111357-8d02528b0f85/go.mod h1:wJKbYRV3aTO/56RPoDGrw1FN9Ns9vOEt7Qhsdn4Rs+g=
 github.com/owncloud/ocis-pkg/v2 v2.4.0/go.mod h1:FSzIvhx9HcZcq4jgNaDowNvM7PTX/XCyoMvyfzidUpE=
 github.com/owncloud/ocis-pkg/v2 v2.4.1-0.20200902134813-1e87c6173ada/go.mod h1:WdcVM54z0X7aQzS8eyGl7S5sjEMVBtLpfpzsPX3Z+Pw=
 github.com/owncloud/ocis-settings v0.3.2-0.20200828091056-47af10a0e872/go.mod h1:vRge9QDkOsc6j76gPBmZs1Z5uOPrV4DIkZCgZCEFwBA=

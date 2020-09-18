@@ -1,4 +1,4 @@
-module github.com/owncloud/mono/reva
+module github.com/owncloud/ocis/reva
 
 go 1.13
 
@@ -10,9 +10,9 @@ require (
 	github.com/micro/go-micro/v2 v2.9.1
 	github.com/oklog/run v1.0.0
 	github.com/owncloud/flaex v0.0.0-20200411150708-dce59891a203
-	github.com/owncloud/mono/ocis-pkg v0.0.0-00010101000000-000000000000
+	github.com/owncloud/ocis/ocis-pkg v0.0.0-00010101000000-000000000000
 	github.com/restic/calens v0.2.0
 	github.com/spf13/viper v1.6.3
 )
 
-replace github.com/owncloud/mono/ocis-pkg => ../ocis-pkg
+replace github.com/owncloud/ocis/ocis-pkg => ../ocis-pkg

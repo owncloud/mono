@@ -1,4 +1,4 @@
-module github.com/owncloud/mono/konnectd
+module github.com/owncloud/ocis/konnectd
 
 go 1.13
 
@@ -18,7 +18,7 @@ require (
 	github.com/oklog/run v1.0.0
 	github.com/openzipkin/zipkin-go v0.2.2
 	github.com/owncloud/flaex v0.2.0
-	github.com/owncloud/mono/ocis-pkg v0.0.0-20200911111357-8d02528b0f85
+	github.com/owncloud/ocis/ocis-pkg v0.0.0-20200911111357-8d02528b0f85
 	github.com/restic/calens v0.2.0
 	github.com/rs/zerolog v1.19.0
 	github.com/sirupsen/logrus v1.4.2
@@ -31,8 +31,8 @@ require (
 )
 
 replace (
-	github.com/owncloud/mono/konnectd => ../konnectd
-	github.com/owncloud/mono/ocis-pkg => ../ocis-pkg
-	github.com/owncloud/mono/settings => ../settings
+	github.com/owncloud/ocis/konnectd => ../konnectd
+	github.com/owncloud/ocis/ocis-pkg => ../ocis-pkg
+	github.com/owncloud/ocis/settings => ../settings
 	google.golang.org/grpc => google.golang.org/grpc v1.26.0
 )

@@ -4,8 +4,8 @@ import (
 	"context"
 
 	"github.com/glauth/glauth/pkg/config"
-	accounts "github.com/owncloud/mono/accounts/pkg/proto/v0"
-	"github.com/owncloud/mono/ocis-pkg/log"
+	accounts "github.com/owncloud/ocis/accounts/pkg/proto/v0"
+	"github.com/owncloud/ocis/ocis-pkg/log"
 )
 
 // Option defines a single option function.

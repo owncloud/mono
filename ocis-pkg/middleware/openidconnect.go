@@ -9,7 +9,7 @@ import (
 	"time"
 
 	oidc "github.com/coreos/go-oidc"
-	ocisoidc "github.com/owncloud/mono/ocis-pkg/oidc"
+	ocisoidc "github.com/owncloud/ocis/ocis-pkg/oidc"
 	"golang.org/x/oauth2"
 )
 

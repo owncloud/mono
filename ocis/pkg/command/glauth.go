@@ -2,11 +2,11 @@ package command
 
 import (
 	"github.com/micro/cli/v2"
-	"github.com/owncloud/mono/glauth/pkg/command"
-	svcconfig "github.com/owncloud/mono/glauth/pkg/config"
-	"github.com/owncloud/mono/glauth/pkg/flagset"
-	"github.com/owncloud/mono/ocis/pkg/config"
-	"github.com/owncloud/mono/ocis/pkg/register"
+	"github.com/owncloud/ocis/glauth/pkg/command"
+	svcconfig "github.com/owncloud/ocis/glauth/pkg/config"
+	"github.com/owncloud/ocis/glauth/pkg/flagset"
+	"github.com/owncloud/ocis/ocis/pkg/config"
+	"github.com/owncloud/ocis/ocis/pkg/register"
 )
 
 // GLAuthCommand is the entrypoint for the glauth command.

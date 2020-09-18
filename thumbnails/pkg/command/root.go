@@ -5,10 +5,10 @@ import (
 	"strings"
 
 	"github.com/micro/cli/v2"
-	"github.com/owncloud/mono/ocis-pkg/log"
-	"github.com/owncloud/mono/thumbnails/pkg/config"
-	"github.com/owncloud/mono/thumbnails/pkg/flagset"
-	"github.com/owncloud/mono/thumbnails/pkg/version"
+	"github.com/owncloud/ocis/ocis-pkg/log"
+	"github.com/owncloud/ocis/thumbnails/pkg/config"
+	"github.com/owncloud/ocis/thumbnails/pkg/flagset"
+	"github.com/owncloud/ocis/thumbnails/pkg/version"
 	"github.com/spf13/viper"
 )
 

@@ -1,12 +1,12 @@
 package grpc
 
 import (
-	"github.com/owncloud/mono/ocis-pkg/service/grpc"
-	"github.com/owncloud/mono/thumbnails/pkg/proto/v0"
-	svc "github.com/owncloud/mono/thumbnails/pkg/service/v0"
-	"github.com/owncloud/mono/thumbnails/pkg/thumbnail/imgsource"
-	"github.com/owncloud/mono/thumbnails/pkg/thumbnail/storage"
-	"github.com/owncloud/mono/thumbnails/pkg/version"
+	"github.com/owncloud/ocis/ocis-pkg/service/grpc"
+	"github.com/owncloud/ocis/thumbnails/pkg/proto/v0"
+	svc "github.com/owncloud/ocis/thumbnails/pkg/service/v0"
+	"github.com/owncloud/ocis/thumbnails/pkg/thumbnail/imgsource"
+	"github.com/owncloud/ocis/thumbnails/pkg/thumbnail/storage"
+	"github.com/owncloud/ocis/thumbnails/pkg/version"
 )
 
 // NewService initializes the grpc service and server.

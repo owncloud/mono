@@ -4,11 +4,11 @@ package command
 
 import (
 	"github.com/micro/cli/v2"
-	"github.com/owncloud/mono/accounts/pkg/command"
-	svcconfig "github.com/owncloud/mono/accounts/pkg/config"
-	"github.com/owncloud/mono/accounts/pkg/flagset"
-	"github.com/owncloud/mono/ocis/pkg/config"
-	"github.com/owncloud/mono/ocis/pkg/register"
+	"github.com/owncloud/ocis/accounts/pkg/command"
+	svcconfig "github.com/owncloud/ocis/accounts/pkg/config"
+	"github.com/owncloud/ocis/accounts/pkg/flagset"
+	"github.com/owncloud/ocis/ocis/pkg/config"
+	"github.com/owncloud/ocis/ocis/pkg/register"
 )
 
 // AccountsCommand is the entrypoint for the accounts command.

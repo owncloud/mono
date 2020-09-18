@@ -6,4 +6,4 @@ Reva has seen a lot of changes that allow us to
 - use the home folder path layout option
 - no longer start the root storage
 
-Related: https://github.com/owncloud/mono/reva/pull/91
+Related: https://github.com/owncloud/ocis/reva/pull/91

@@ -13,7 +13,7 @@ You can download prebuilt binaries from the GitHub releases or from our [downloa
 Make sure you have a working Go environment, for further reference or a guide take a look at the [install instructions](http://golang.org/doc/install.html). This project requires Go >= v1.13.
 
 ```console
-git clone https://github.com/owncloud/mono/store.git
+git clone https://github.com/owncloud/ocis/store.git
 cd ocis-store
 
 make generate build
