@@ -452,7 +452,7 @@ def docker(ctx, arch):
           'ref': {
             'exclude': [
               'refs/pull/**',
-              'refs/tags/**/**',
+              'refs/tags/*/**',
             ],
           },
         },
@@ -570,7 +570,7 @@ def binary(ctx, name):
               'refs/tags/**',
             ],
             'exclude': [
-              'refs/tags/**/**'
+              'refs/tags/*/**'
             ]
           }
         },
