@@ -452,7 +452,7 @@ def docker(ctx, arch):
           'ref': {
             'exclude': [
               'refs/pull/**',
-              'refs/tags/**/v*',
+              'refs/tags/*/v*',
             ],
           },
         },
@@ -557,6 +557,12 @@ def binary(ctx, name):
             'path': '/srv/app',
           },
         ],
+        'when': {
+          'ref': [
+            'refs/heads/master',
+            'refs/tags/v*',
+          ],
+        },
       },
       {
         'name': 'upload',
@@ -564,15 +570,10 @@ def binary(ctx, name):
         'pull': 'always',
         'settings': settings,
         'when': {
-          'ref': {
-            'include': [
-              'refs/heads/master',
-              'refs/tags/**',
-            ],
-            'exclude': [
-              'refs/tags/*/**'
-            ]
-          }
+          'ref': [
+            'refs/heads/master',
+            'refs/tags/v*',
+          ],
         },
       },
       {
@@ -585,7 +586,7 @@ def binary(ctx, name):
         ],
         'when': {
           'ref': [
-            'refs/tags/**',
+            'refs/tags/v*',
           ],
         },
       },
@@ -607,7 +608,28 @@ def binary(ctx, name):
         },
         'when': {
           'ref': [
-            'refs/tags/**',
+            'refs/tags/v*',
+          ],
+        },
+      },
+      {
+        'name': 'release-submodule',
+        'image': 'plugins/github-release:1',
+        'pull': 'always',
+        'settings': {
+          'api_key': {
+            'from_secret': 'github_token',
+          },
+          'files': [
+          ],
+          'title': ctx.build.ref.replace("refs/tags/", ""),
+          'note': 'Release %s submodule' % (ctx.build.ref.replace("refs/tags/", "").replace("/v", " ")),
+          'overwrite': True,
+          'prerelease': len(ctx.build.ref.split("-")) > 1,
+        },
+        'when': {
+          'ref': [
+            'refs/tags/*/v*',
           ],
         },
       },
