@@ -452,7 +452,7 @@ def docker(ctx, arch):
           'ref': {
             'exclude': [
               'refs/pull/**',
-              'refs/tags/*/**',
+              'refs/tags/**/v*',
             ],
           },
         },
